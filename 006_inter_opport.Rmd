@@ -1,0 +1,678 @@
+---
+title: "Analyzing international opportunities"
+author: "Luis Francisco Gomez Lopez"
+date: 2020-08-25
+output:
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme: structurebold
+    theme: AnnArbor
+    fig_caption: true
+  slidy_presentation: default
+bibliography: econ_glob_faedis.bib
+link-citations: yes
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+  - \usepackage{fontawesome5}
+  - \usepackage{xcolor}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo      = FALSE, 
+                      warning   = FALSE, 
+                      message   = FALSE,
+                      fig.align = "center")
+```
+
+```{r libraries}
+
+library(tidyverse)
+library(tidyquant)
+library(wbstats)
+library(DiagrammeR)
+```
+
+# Contents
+
+- Please Read Me
+- Purpose
+- National business environment
+- Market-potential analysis
+- Secondary market research
+- Acknowledgments
+- References
+
+# Please Read Me
+
+- Check the message __Welcome greeting__ published in the News Bulletin Board.
+
+- Dear student please edit your profile uploading a photo where your face is clearly visible.
+
+- The purpose of the virtual meetings is to answer questions and not to make a summary of the study material.
+
+- This presentation is based on [@wild_international_2020, Chapter 12]
+
+# Purpose
+
+Understand the importance of analyzing the characteristics of the national economies to select a market and point out how to do it using data
+
+# National business environment
+
+- Data
+
+    + Doing Business - World Bank: https://www.doingbusiness.org/
+    
+    + Doing Business 2020: [@world_bank_doing_2020]
+    
+- Methodology
+
+    + https://www.doingbusiness.org/ > Methodology
+    
+    + Knowing your data
+    
+        + __Doesn't__ measure all aspects of the business environment that matter to companies or investors
+        
+        + Only 10 topics with the specific aim on measuring business regulations are cover
+        
+# National business environment
+
+\definecolor{tq_blue}{RGB}{44, 62, 80}
+\definecolor{tq_steel_blue}{RGB}{166, 206, 227}
+\definecolor{tq_navy_blue}{RGB}{31, 120, 180}
+
+- What is measure in _Doing Business_ 2020? [@world_bank_doing_2020, p 3] 
+
+    + Opening a business
+
+        + \textcolor{tq_blue}{\faIcon{store-alt}} Starting a business
+    
+    + Getting a location
+
+        + \textcolor{tq_steel_blue}{\faIcon{tools}} Dealing with construction permits
+        + \textcolor{tq_steel_blue}{\faIcon{bolt}} Getting electricity
+        + \textcolor{tq_steel_blue}{\faIcon{city}} Registering property
+    
+    + Accessing finance
+
+        + \textcolor{tq_navy_blue}{\faIcon[regular]{credit-card}} Getting credit
+        + \textcolor{tq_navy_blue}{\faIcon{user-shield}} Protecting minority investors
+        
+# National business environment
+
+\definecolor{tq_light_green}{RGB}{178, 223, 138}
+\definecolor{tq_orange}{RGB}{255, 127, 0}
+
+- What is measure in _Doing Business_ 2020? [@world_bank_doing_2020, p 3] 
+
+    + Dealing withday-to-day operations
+
+        + \textcolor{tq_light_green}{\faIcon{file-invoice-dollar}} Paying taxes
+        + \textcolor{tq_light_green}{\faIcon{truck-moving}} Trading across borders
+
+    + Operating in a secure business environment
+
+        + \textcolor{tq_orange}{\faIcon{file-signature}} Enforcing contracts
+        + \textcolor{tq_orange}{\faIcon{gavel}} Resolving insolvency
+        
+# National business environment
+
+- Some data about _Doing Business_ 2020 which corresponds to year 2019
+
+```{r, out.width="80%"}
+
+# By regions
+# More information:
+# - How does the World Bank classify countries?
+# - World Bank Country and Lending Groups
+wb_by_region_iso3c <- wb_regions() %>%
+                        drop_na() %>%
+                        pull(iso3c)
+
+# Data Doing Business 2020: year 2019
+doing_business_score_2019 <- wb_data(indicator  = c("IC.BUS.DFRN.XQ", "IC.BUS.EASE.XQ"),
+                                     country    = "all",
+                                     start_date = 2019,
+                                     end_date   = 2019)
+
+# Data World Bank Regions
+region_doing_business_score_2019 <- doing_business_score_2019 %>%
+    filter(iso3c %in% wb_by_region_iso3c) %>%
+    mutate(text_score = as.character(IC.BUS.DFRN.XQ %>% round(digits = 2)))
+
+    # Plot World Bank Regions
+    region_doing_business_score_2019 %>%
+    ggplot(aes(x = IC.BUS.DFRN.XQ, y = fct_reorder(country, IC.BUS.DFRN.XQ))) +
+    geom_point(size = 4,
+               color = palette_light()[[1]]) +
+    geom_label(aes(label = text_score),
+               fill = palette_light()[[2]],
+               hjust = -0.5) +
+    geom_segment(aes(xend = 0, yend = country)) +
+    xlim(0, 90) +
+    labs(x        = "",
+         y        = "",
+         title    = "Ease of doing business score by World Bank regions: year 2019",
+         subtitle = str_glue("0 = lowest performance to 100 = best performance
+                              Doing Business code: IC.BUS.DFRN.XQ"),
+         caption  = str_glue("Source: Doing Business - World Bank
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          legend.position   = "bottom",
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"),
+          axis.text.x       = element_blank(),
+          axis.ticks.x      = element_blank())
+```
+
+# National business environment
+
+- Some data about _Doing Business_ 2020 which corresponds to year 2019
+
+```{r, out.width="80%"}
+
+# Data World Bank countries
+top_country_doing_business_score_2019 <- doing_business_score_2019 %>%
+                                        drop_na() %>%
+                                        arrange(desc(IC.BUS.DFRN.XQ)) %>%
+                                        slice_max(IC.BUS.DFRN.XQ,
+                                                  n         = 20,
+                                                  with_ties = FALSE) %>%
+                                     mutate(text_score = as.character(IC.BUS.DFRN.XQ %>%
+                                                                          round(digits = 2)))
+
+# Plot World Bank Regions
+top_country_doing_business_score_2019 %>%
+    ggplot(aes(x = IC.BUS.DFRN.XQ, y = fct_reorder(country, IC.BUS.DFRN.XQ))) +
+    geom_point(size = 4,
+               color = palette_light()[[1]]) +
+    geom_label(aes(label = text_score),
+               fill = palette_light()[[2]],
+               hjust = -0.5) +
+    geom_segment(aes(xend = 0, yend = country)) +
+    xlim(0, 100) +
+    labs(x        = "",
+         y        = "",
+         title    = str_glue("Top {nrow(top_country_doing_business_score_2019)} ease of doing business score by countries: year 2019"),
+         subtitle = str_glue("0 = lowest performance to 100 = best performance
+                              Doing Business code: IC.BUS.DFRN.XQ"),
+         caption  = str_glue("Source: Doing Business - World Bank
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          legend.position   = "bottom",
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"),
+          axis.text.x       = element_blank(),
+          axis.ticks.x      = element_blank())
+```
+
+# National business environment
+
+- Some data about _Doing Business_ 2020 which corresponds to year 2019
+
+```{r, out.width="80%"}
+
+# Data World Bank countries
+low_country_doing_business_score_2019 <- doing_business_score_2019 %>%
+                                        drop_na() %>%
+                                        arrange(desc(IC.BUS.DFRN.XQ)) %>%
+                                        slice_min(IC.BUS.DFRN.XQ,
+                                                  n         = 20,
+                                                  with_ties = FALSE) %>%
+                                     mutate(text_score = as.character(IC.BUS.DFRN.XQ %>%
+                                                                          round(digits = 2)))
+
+# Plot World Bank Regions
+low_country_doing_business_score_2019 %>%
+    ggplot(aes(x = IC.BUS.DFRN.XQ, y = fct_reorder(country, IC.BUS.DFRN.XQ))) +
+    geom_point(size = 4,
+               color = palette_light()[[1]]) +
+    geom_label(aes(label = text_score),
+               fill = palette_light()[[2]],
+               hjust = -0.5) +
+    geom_segment(aes(xend = 0, yend = country)) +
+    xlim(0, 50) +
+    labs(x        = "",
+         y        = "",
+         title    = str_glue("Lower {nrow(low_country_doing_business_score_2019)} ease of doing business score by countries: year 2019"),
+         subtitle = str_glue("0 = lowest performance to 100 = best performance
+                              Doing Business code: IC.BUS.DFRN.XQ"),
+         caption  = str_glue("Source: Doing Business - World Bank
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          legend.position   = "bottom",
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"),
+          axis.text.x       = element_blank(),
+          axis.ticks.x      = element_blank())
+```
+
+# Market-potential analysis
+
+- Main topics commonly included and possible variables
+
+```{r, out.width="100%"}
+
+grViz("
+digraph boxes_and_circles {
+
+  graph [rankdir = LR]
+
+  node [shape = circle, color = '#2C3E50']
+  'Main variables';
+
+  node [shape = oval, color = '#E31A1C']
+
+  'Market size';
+  'Market growth rate';
+  'Market intensity';
+  'Market consumption\ncapacity';
+  'Infrastructure';
+  'Market receptivity'
+  
+  node [shape = oval, color = '#18BC9C']
+  
+  'Population\nElectric power consumption\nEnergy consumption';
+  'GDP per capita growth';
+  'GDP based on\npurchasing power parity (PPP)';
+  'Labor force\nwith advanced education';
+  'Fixed broadband subscriptions\nIndividuals using the internet\nMobile cellular subscriptions';
+  'Sum of exports and imports\nof goods and services\nas a percentage of GDP';
+
+  'Main variables'-> 'Market size';
+  'Main variables'-> 'Market growth rate';
+  'Main variables' -> 'Market intensity';
+  'Main variables' -> 'Market consumption\ncapacity';
+  'Main variables' -> 'Infrastructure';
+  'Main variables' -> 'Market receptivity';
+  
+  'Market size' -> 'Population\nElectric power consumption\nEnergy consumption';
+  'Market growth rate' -> 'GDP per capita growth';
+  'Market intensity' -> 'GDP based on\npurchasing power parity (PPP)';
+  'Market consumption\ncapacity' -> 'Labor force\nwith advanced education';
+  'Infrastructure' -> 'Fixed broadband subscriptions\nIndividuals using the internet\nMobile cellular subscriptions';
+  'Market receptivity' -> 'Sum of exports and imports\nof goods and services\nas a percentage of GDP'; 
+  
+}
+")
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r}
+
+iso3c_countries_selected <- c("ARG", "BRA", "CHL", "COL", "PER")
+
+# Variables
+## EG.USE.ELEC.KH.PC: Electric power consumption (kWh per capita)
+## NY.GDP.PCAP.KD.ZG: GDP per capita growth (annual %)
+## NY.GDP.MKTP.PP.KD: GDP, PPP (constant 2017 international $)
+## SL.TLF.ADVN.ZS: Labor force with advanced education (% of total working-age population with advanced education)
+## IT.NET.BBND.P2: Fixed broadband subscriptions (per 100 people)
+## E.TRD.GNFS.ZS: Trade (% of GDP)
+variable_codes <- c("EG.USE.ELEC.KH.PC", "NY.GDP.PCAP.KD.ZG",
+                    "NY.GDP.MKTP.PP.KD", "SL.TLF.ADVN.ZS",
+                    "IT.NET.BBND.P2", "NE.TRD.GNFS.ZS")
+
+countries_selected_data <- wb_data(indicator = variable_codes,
+                                   country   = iso3c_countries_selected) %>%
+  select(-iso2c)
+```
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[1]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[1],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[1],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    xlim(c(1970, 2015)) +
+    labs(x        = "Year",
+         y        = "kWh per capita",
+         fill     = "",
+         title    = "Electric power consumption",
+         subtitle = str_glue("Variables units: Kilowatt-hour per capita
+                              Variable WDI code : {variable_codes[1]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[2]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[2],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[2],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    geom_hline(yintercept = 0) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    scale_y_continuous(labels = scales::number_format(suffix = "%", accuracy = 1)) +
+    labs(x        = "Year",
+         y        = "Percent",
+         fill     = "",
+         title    = "Annual GDP per capita growth",
+         subtitle = str_glue("Variables units: percent
+                              Variable WDI code : {variable_codes[2]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[3]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[3],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[3],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    xlim(c(1990, 2020)) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    scale_y_continuous(labels = scales::number_format(scale    = 1e-9,
+                                                      suffix   = "B",
+                                                      accuracy = 1)) +
+    labs(x        = "Year",
+         y        = "Billions (Short scale)",
+         fill     = "",
+         title    = "GDP purchase power parity (PPP)",
+         subtitle = str_glue("Variables units: International constant USD (PPP) (Base year = 2017)
+                              Variable WDI code : {variable_codes[3]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[4]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[4],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[4],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    xlim(c(1996, 2020)) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    scale_y_continuous(labels = scales::number_format(suffix = "%", accuracy = 1)) +
+    labs(x        = "Year",
+         y        = "Percent",
+         fill     = "",
+         title    = "Labor force with advanced education",
+         subtitle = str_glue("Variables units: percent of total working-age population with advanced education
+                              Variable WDI code : {variable_codes[4]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[5]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[5],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[5],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    xlim(c(1998, 2018)) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    labs(x        = "Year",
+         y        = "Subscriptions per 100 people",
+         fill     = "",
+         title    = "Fixed broadband subscriptions",
+         subtitle = str_glue("Variables units: number of subscriptions per 100 people
+                              Variable WDI code : {variable_codes[5]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Market-potential analysis
+
+- Some data for the case of selected countries in South America
+
+```{r, out.width="80%"}
+
+countries_selected_data %>%
+    select(iso3c:date, variable_codes[6]) %>%
+    ggplot() +
+    geom_point(aes_string(x     = "date",
+                          y     = variable_codes[6],
+                          fill = "country"),
+               color = "black",
+               shape = 21) +
+    geom_line(aes_string(x     = "date",
+                         y     = variable_codes[6],
+                         group = "country",
+                         color = "country"),
+              show.legend = FALSE) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    scale_y_continuous(labels = scales::number_format(suffix = "%", accuracy = 1)) +
+    labs(x        = "Year",
+         y        = "Percent",
+         fill     = "",
+         title    = "Trade as percent of GDP",
+         subtitle = str_glue("Variables units: sum of exports and imports as percent of GDP
+                              Variable WDI code : {variable_codes[6]}"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-08-18")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom",
+          axis.text         = element_text(face = "bold"))
+```
+
+# Secondary market research
+
+- __Market research companies__
+
+    + Outside USA 
+    
+        + Euromonitor International: https://www.euromonitor.com/
+        
+    + Inside or with a subsidiary in USA [@greenbook_2019_2019, p 12-13]
+        
+        + Nielsen Holdings PLC: https://www.nielsen.com/us/en/
+        + Gartner, Inc: https://www.gartner.com/en
+        + IQVIA: https://www.iqvia.com/
+        + Kantar: https://www.kantar.com/
+        + Information Resources, Inc: https://www.iriworldwide.com/en-us
+        
+- __Government agencies__
+    
+    + National statistical offices: https://unstats.un.org/home/nso_sites/
+    + Data DANE[^1] (Colombia): https://sitios.dane.gov.co/anda-index/
+
+[^1]: Departamento Administrativo Nacional de Estadística
+
+# Secondary market research
+
+\definecolor{tq_navy_blue}{RGB}{31, 120, 180}
+\definecolor{python_green}{RGB}{10,103,27}
+
+- Software for Data Analysis
+
+    + \textcolor{tq_navy_blue}{\faIcon{r-project}} is a free software environment for statistical computing and graphics
+    
+        + https://www.r-project.org/ 
+        
+    + \textcolor{python_green}{\faIcon{python}} is an interpreted, high-level, general-purpose programming language
+    
+        + https://www.python.org/about/
+        
+- Tools to use with \textcolor{tq_navy_blue}{\faIcon{r-project}} and \textcolor{python_green}{\faIcon{python}}  
+
+    + __Rstudio IDE__ is an integrated development environment (IDE) for R
+    
+        + https://rstudio.com/products/rstudio/download/
+        
+    + __Anaconda__ is a python distribution, with installation and package management tools 
+
+        + https://www.anaconda.com/products/individual
+        
+# Secondary market research
+
+\definecolor{tq_navy_blue}{RGB}{31, 120, 180}
+\definecolor{python_green}{RGB}{10,103,27}
+
+- Learning Data Analysis
+
+    + \textcolor{tq_navy_blue}{\faIcon{r-project}}
+
+        + __Statistical Inference via Data Science__: https://moderndive.com/
+
+        + __R for Data Science__: https://r4ds.had.co.nz/
+        
+    + \textcolor{python_green}{\faIcon{python}}
+    
+        + __Python Data Science Handbook__: https://jakevdp.github.io/PythonDataScienceHandbook/
+        
+# Acknowledgments
+
+\definecolor{tq_navy_blue}{RGB}{31, 120, 180}
+\definecolor{tq_orange}{RGB}{255,127,0}
+        
+- To my family that supports me
+
+- To the taxpayers of Colombia and the __[UMNG students](https://www.umng.edu.co/estudiante)__ who pay my salary
+
+- To the __[Business Science](https://www.business-science.io/)__ and __[R4DS Online Learning](https://www.rfordatasci.com/)__ communities where I learn __[R](https://www.r-project.org/about.html)__ 
+
+- To the __[R Core Team](https://www.r-project.org/contributors.html)__, the creators of __[RStudio IDE](https://rstudio.com/products/rstudio/)__ and the authors and maintainers of the packages __[tidyverse](https://CRAN.R-project.org/package=tidyverse)__, __[tidyquant](https://CRAN.R-project.org/package=tidyquant)__, __[wbstats](https://CRAN.R-project.org/package=wbstats)__, __[DiagrammeR](https://CRAN.R-project.org/package=DiagrammeR)__ and __[tinytex](https://CRAN.R-project.org/package=tinytex)__ for allowing me to access these tools without paying for a license
+
+- To the __[Linux kernel community](https://www.kernel.org/category/about.html)__ for allowing me the possibility to use some __[Linux distributions](https://static.lwn.net/Distributions/)__ as my main __[OS](https://en.wikipedia.org/wiki/Operating_system)__ without paying for a license
+        
+# References

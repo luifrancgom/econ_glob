@@ -1,0 +1,471 @@
+---
+title: "Selecting and managing entry modes"
+author: "Luis Francisco Gomez Lopez"
+date: 2020-09-01
+output:
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme: structurebold
+    theme: AnnArbor
+    fig_caption: true
+  slidy_presentation: default
+bibliography: econ_glob_faedis.bib
+link-citations: yes
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+  - \usepackage{fontawesome5}
+  - \usepackage{xcolor}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo      = FALSE, 
+                      warning   = FALSE, 
+                      message   = FALSE,
+                      fig.align = "center")
+```
+
+```{r libraries}
+
+library(DiagrammeR)
+library(comtradr)
+library(tidyverse)
+library(countrycode)
+library(treemapify)
+library(tidyquant)
+library(fs)
+library(knitr)
+library(kableExtra)
+```
+
+# Contents
+
+- Please Read Me
+- Purpose
+- Entry modes for international markets
+- Exporting goods in Colombia
+- Importing goods in Colombia
+- Franchising in Colombia
+- Turnkey project and Joint venture: cement plant Río Claro (Sonsón, Colombia) case study 
+- Acknowledgments
+- References
+
+# Please Read Me
+
+- Check the message __Welcome greeting__ published in the News Bulletin Board.
+
+- Dear student please edit your profile uploading a photo where your face is clearly visible.
+
+- The purpose of the virtual meetings is to answer questions and not to make a summary of the study material.
+
+- This presentation is based on [@wildInternationalBusinessChallenges2020, Chapter 13]
+
+# Purpose
+
+Introduce the students to the different entry modes companies use to do international business and participate directly into the international markets
+
+# Entry modes for international markets
+
+```{r, out.width="100%"}
+
+grViz("
+digraph boxes_and_circles {
+
+  graph [rankdir = LR]
+
+  node [shape = circle, color = '#2C3E50']
+  
+  'Entry\nmodes';
+
+  node [shape = oval, color = '#E31A1C']
+
+  'Trade';
+  
+  node [shape = oval, color = '#18BC9C']
+  
+  'Exporting';
+  'Importing';
+  'Countertrade';
+  
+  node [shape = oval, color = '#CCBE93']
+  
+  'Direct';
+  'Indirect';
+  'Barter';
+  'Counterpurchase';
+  'Offset';
+  'Switching trading';
+  'Buyback';
+  
+  node [shape = oval, color = '#A6CEE3']
+  
+  'Sales\nrepresentative';
+  'Distributor';
+  
+  'Agent';
+  'Export management\ncompany';
+  'Export trading\ncompany';
+  
+  node [shape = oval, color = '#CCBE93']
+  
+  'Direct';
+  
+  'Entry\nmodes'-> 'Trade' ;
+  
+  'Trade' -> 'Exporting';
+  'Trade' -> 'Importing';
+  'Trade' -> 'Countertrade';
+  
+  'Exporting' -> 'Direct';
+  'Exporting' -> 'Indirect';
+  'Countertrade'-> 'Barter';
+  'Countertrade'-> 'Counterpurchase';
+  'Countertrade'-> 'Offset';
+  'Countertrade'-> 'Switching trading';
+  'Countertrade'-> 'Buyback';
+  
+  'Direct' -> 'Sales\nrepresentative';
+  'Direct' -> 'Distributor';
+  'Indirect'-> 'Agent';
+  'Indirect'-> 'Export management\ncompany';
+  'Indirect'-> 'Export trading\ncompany';
+  
+}
+")
+```
+
+# Entry modes for international markets
+
+```{r, out.width="100%"}
+
+grViz("
+digraph boxes_and_circles {
+
+  graph [rankdir = LR]
+
+  node [shape = circle, color = '#2C3E50']
+  'Entry\nmodes';
+
+  node [shape = oval, color = '#E31A1C']
+
+  'Contractual';
+  'Investment';
+  
+  node [shape = oval, color = '#18BC9C']
+  
+  'Licensing';
+  'Franchising';
+  'Management contracts';
+  'Turnkey project';
+  'Wholly owned subsidiary';
+  'Joint venture';
+  'Strategic alliance';
+  
+  node [shape = oval, color = '#CCBE93']
+  
+  'Forward Integration';
+  'Backward Integration';
+  'Buyback';
+  'Multistage';
+
+  'Entry\nmodes'-> 'Contractual';
+  'Entry\nmodes'-> 'Investment';
+  
+  'Contractual' -> 'Licensing';
+  'Contractual' -> 'Franchising';
+  'Contractual' -> 'Management contracts';
+  'Contractual' -> 'Turnkey project';
+  'Investment' -> 'Wholly owned subsidiary';
+  'Investment' -> 'Joint venture';
+  'Investment' -> 'Strategic alliance';
+  
+  'Joint venture' -> 'Forward Integration';
+  'Joint venture' -> 'Backward Integration';
+  'Joint venture' -> 'Buyback';
+  'Joint venture' -> 'Multistage';
+  
+}
+")
+```
+
+# Exporting goods in Colombia
+
+```{r, out.width="90%"}
+
+# Data
+col_2019_exports <- ct_search(reporters = "Colombia",
+          partners = "All",
+          trade_direction = "exports",
+          freq = "annual",
+          start_date = 2019,
+          end_date = 2019,
+          commod_codes = "TOTAL",
+          type = "goods")
+
+# Data clean
+col_2019_exports_clean <- col_2019_exports %>%
+    as_tibble() %>%
+    select(year, trade_flow,
+           reporter_iso, reporter,
+           partner_iso, partner,
+           commodity_code, commodity,
+           trade_value_usd) %>%
+    arrange(desc(trade_value_usd)) %>%
+    # Areas excluded: "World", "Other Asia, nes", "Free Zones", "Areas, nes"
+    filter(!(partner %in% c("World", "Other Asia, nes", "Free Zones", "Areas, nes", "Br. Indian Ocean Terr."))) %>%
+    # Adding continent
+    left_join(codelist %>%
+                  select(continent, country.name.en, iso3c), by = c("partner_iso" = "iso3c")) %>%
+    select(year, trade_flow, reporter, partner_iso, partner, trade_value_usd, continent) %>%
+    mutate(label_text = str_glue("{partner}
+                                 {(trade_value_usd / sum(trade_value_usd)) %>% scales::percent(accuracy = 0.01)}"))
+
+# Plot
+col_2019_exports_clean %>%
+    ggplot(aes(area  = trade_value_usd,
+               label = label_text,
+               subgroup = continent)) +
+    geom_treemap(aes(fill = continent),
+                 color = "black",
+                 alpha = 0.8) +
+    geom_treemap_text() +
+    scale_fill_tq() +
+    labs(x        = "",
+         y        = "",
+         fill     = "",
+         title    = "Colombia goods exports by destination as percent of total exports: year 2019",
+         subtitle = str_glue("Territories excluded: Free zones, British Indian Ocean Territory, Areas not elsewhere specified
+                             and other Asia areas not elsewhere specified,
+                             Products excluded: exports of services are not included"),
+         caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
+                              Last update: 2020-09-01")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom")
+```
+
+# Exporting goods in Colombia[^1]
+
+```{r}
+
+# Files
+csv_files <- dir_ls(path = "007_export_col_monthly/", regexp = "[.]csv$")
+
+# Data
+export_col_comp_2019 <- csv_files %>%
+  map_dfr(.f = read_csv, col_types = cols(POSAR = col_character(),
+                                          NIT   = col_character(),
+                                          FECH  = col_character())) %>%
+  select(FECH, FOBDOL, FOBPES, NIT, RAZ_SIAL)
+
+# Unique names export
+unique_name_export <- export_col_comp_2019 %>%
+  select(NIT, RAZ_SIAL) %>%
+  distinct(NIT, .keep_all = TRUE)
+
+# Table
+export_col_comp_2019 %>%
+  group_by(NIT) %>%
+  summarise(export_fob_us = sum(FOBDOL)) %>%
+  ungroup() %>%
+  arrange(desc(export_fob_us)) %>%
+  left_join(unique_name_export, by = "NIT") %>%
+  select(NIT, RAZ_SIAL, export_fob_us) %>%
+  set_names(nm = c("NIT", "Name", "Exports (US dollars)")) %>%
+  slice(1:10) %>%
+  mutate(`Exports (US dollars)` = scales::dollar(`Exports (US dollars)`),
+         NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
+  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to exports (FOB) in 2019") %>%
+  kable_styling(font_size = 6, latex_options = "striped") %>%
+  row_spec(row = 0, bold = TRUE)
+```
+
+[^1]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de exportaciones > Estadísticas de Exportaciones - EXPO - 2011 A 2020 > Expo_2019
+
+# Importing goods in Colombia
+
+```{r, out.width="90%"}
+
+# Data
+col_2019_imports <- ct_search(reporters = "Colombia",
+                              partners = "All",
+                              trade_direction = "imports",
+                              freq = "annual",
+                              start_date = 2019,
+                              end_date = 2019,
+                              commod_codes = "TOTAL",
+                              type = "goods")
+
+# Data clean
+col_2019_imports_clean <- col_2019_imports %>%
+    as_tibble() %>%
+    select(year, trade_flow,
+           reporter_iso, reporter,
+           partner_iso, partner,
+           commodity_code, commodity,
+           trade_value_usd)  %>%
+    arrange(desc(trade_value_usd)) %>%
+    # Areas excluded: "World", "Other Asia, nes", "Free Zones", "Areas, nes"
+    filter(!(partner %in% c("World", "Other Asia, nes", "Free Zones", "Colombia",
+                            "Br. Indian Ocean Terr.", "Fr. South Antarctic Terr."))) %>%
+    # Adding continent
+    left_join(codelist %>%
+                  select(continent, country.name.en, iso3c), by = c("partner_iso" = "iso3c")) %>%
+    select(year, trade_flow, reporter, partner_iso, partner, trade_value_usd, continent) %>%
+    mutate(label_text = str_glue("{partner}
+                                 {(trade_value_usd / sum(trade_value_usd)) %>% scales::percent(accuracy = 0.01)}"))
+
+# Plot
+col_2019_imports_clean %>%
+    ggplot(aes(area  = trade_value_usd,
+               label = label_text,
+               subgroup = continent)) +
+    geom_treemap(aes(fill = continent),
+                 color = "black",
+                 alpha = 0.8) +
+    geom_treemap_text() +
+    scale_fill_tq() +
+    labs(x        = "",
+         y        = "",
+         fill     = "",
+         title    = "Colombia goods imports by origin as percent of total exports: year 2019",
+         subtitle = str_glue("Territories excluded: Free zones, British Indian Ocean Territory, Colombia
+                             other Asia areas not elsewhere specified and French Southern and Antarctic Lands
+                             Products excluded: exports of services are not included"),
+         caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
+                              Last update: 2020-09-01")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          legend.position   = "bottom")
+```
+
+# Importing goods in Colombia[^2]
+
+```{r}
+
+# Files
+csv_files <- dir_ls(path = "007_import_col_monthly/", regexp = "[.]csv$")
+
+# Data
+import_col_comp_2019 <- csv_files %>%
+    map_dfr(.f = read_csv2, col_types = cols(NABAN  = col_character(),
+                                            NIT     = col_character(),
+                                            FECH    = col_character(),
+                                            PAISGEN = col_character(),
+                                            PAISPRO = col_character(),
+                                            PAISCOM = col_character(),
+                                            BANDERA = col_character(),
+                                            COPAEX  = col_character(),
+                                            ACUERDO = col_character()),
+            locale = locale(decimal_mark = ",")) %>%
+    select(FECH, VACID, VACIP, NIT, RZIMPO)
+
+# Unique names
+unique_name_import <- import_col_comp_2019 %>%
+    select(NIT, RZIMPO) %>%
+    distinct(NIT, .keep_all = TRUE)
+
+# Table
+import_col_comp_2019 %>%
+    group_by(NIT) %>%
+    summarise(import_cif_us = sum(VACID)) %>%
+    ungroup() %>%
+    arrange(desc(import_cif_us)) %>%
+    left_join(unique_name_import, by = "NIT") %>%
+    select(NIT, RZIMPO, import_cif_us) %>%
+    set_names(nm = c("NIT", "Name", "Imports (US dollars)")) %>%
+    slice(1:10) %>%
+    mutate(`Imports (US dollars)` = scales::dollar(`Imports (US dollars)`),
+           NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
+    kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to imports (CIF) in 2019") %>%
+    kable_styling(font_size = 6, latex_options = "striped") %>%
+    row_spec(row = 0, bold = TRUE)
+```
+
+[^2]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de importaciones > Estadísticas de Importaciones - IMPO - 2012 A 2020 > Impo_2019
+
+# Franchising in Colombia
+
+- Not explicit regulated by any local law or Andean regulation [@reyesPrimerFranchisingColombia2016]
+
+    + Colombian Civil Code, Article 1602: franchisor and franchisee are free to perform a franchising relationship
+    + Franchisor should register her trademarks, logos and slogans in agreement with the Andean Decision 486 of 2000[^3]
+    
+- Colfranquicias - Camara Colombiana de Franquicias: https://www.colfranquicias.com/
+
+    + Franchises
+    + Consultants
+    + Suppliers
+    
+[^3]: It regulates the Common Regime on Industrial Property in Colombia
+
+# Turnkey project and Joint venture: cement plant Río Claro (Sonsón, Colombia) case study 
+
+- Construction of a cement plant in Sonsón, Colombia[^4]
+
+    + Production capacity: 
+    
+        + 3150 tons per day of clinker
+        + 1.35 million tons of cement per year
+        
+    + Cost
+    
+        + 238  million USD (224.6 million EUR)
+        
+    + Creation of Jobs
+    
+        + 800 jobs in the course of its construction
+        + 220 direct and 250 indirect jobs when it becomes fully operational
+        
+# Turnkey project and Joint venture: cement plant Río Claro (Sonsón, Colombia) case study
+
+- Commissioned by Ecocementos S.A.S
+
+    + Joint venture between Corona (Colombia) and Cementos Molins (Spain)
+    
+- Construction company 
+
+    + OHL Industrial (Spain)
+
+- Equipment supplier company
+
+    + FLSmidth (Denmark)
+    
+# Acknowledgments
+
+- To my family that supports me
+
+- To the taxpayers of Colombia and the __[UMNG students](https://www.umng.edu.co/estudiante)__ who pay my salary
+
+- To the __[Business Science](https://www.business-science.io/)__ and __[R4DS Online Learning](https://www.rfordatasci.com/)__ communities where I learn __[R](https://www.r-project.org/about.html)__ 
+
+- To the __[R Core Team](https://www.r-project.org/contributors.html)__, the creators of __[RStudio IDE](https://rstudio.com/products/rstudio/)__ and the authors and maintainers of the packages __[tidyverse](https://CRAN.R-project.org/package=tidyverse)__, __[knitr](https://CRAN.R-project.org/package=knitr)__, __[kableExtra](https://CRAN.R-project.org/package=kableExtra)__, __[tidyquant](https://CRAN.R-project.org/package=tidyquant)__, __[comtradr](https://CRAN.R-project.org/package=comtradr)__, __[countrycode](https://CRAN.R-project.org/package=countrycode)__,
+__[treemapify](https://CRAN.R-project.org/package=treemapify)__,
+__[fs](https://CRAN.R-project.org/package=fs)__,
+__[DiagrammeR](https://CRAN.R-project.org/package=DiagrammeR)__ and __[tinytex](https://CRAN.R-project.org/package=tinytex)__ for allowing me to access these tools without paying for a license
+
+- To the __[Linux kernel community](https://www.kernel.org/category/about.html)__ for allowing me the possibility to use some __[Linux distributions](https://static.lwn.net/Distributions/)__ as my main __[OS](https://en.wikipedia.org/wiki/Operating_system)__ without paying for a license
+
+# References

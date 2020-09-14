@@ -1,0 +1,385 @@
+---
+title: "Global business environment"
+author: Luis Francisco Gomez Lopez
+date: 2020-07-22
+output:
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme: structurebold
+    theme: AnnArbor
+    fig_caption: true
+  ioslides_presentation: default
+  slidy_presentation: default
+bibliography: econ_glob_faedis.bib
+link-citations: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo      = FALSE, 
+                      warning   = FALSE, 
+                      message   = FALSE,
+                      fig.align = "center")
+```
+
+```{r libraries}
+
+library(tidyverse)
+library(wbstats)
+library(tidyquant)
+library(rvest)
+library(kofdata)
+library(knitr)
+```
+
+# Contents
+
+- Please Read Me
+- Purpose
+- International commercial transactions
+- Key players in international business
+- What is globalization?
+- Forces driving globalization
+- Measuring globalization
+- Debates about globalization
+- The global business environment
+- Acknowledgments
+- References
+
+# Please Read Me
+
+- Check the message __Welcome greeting__ published in the News Bulletin Board.
+
+- Dear student please edit your profile uploading a photo where your face is clearly visible.
+
+- The purpose of the virtual meetings is to answer questions and not to make a summary of the study material.
+
+- This presentation is based on [wildInternationalBusinessChallenges2020, Chapter 1]
+
+# Purpose
+
+Introduce the students to the concept of globalization and explain how it affects markets, production, inequality, culture, sovereignty and the environment.
+
+# International commercial transactions
+
+```{r, out.width="90%"}
+
+# Data
+wb(country   = "WLD",
+   indicator = c("NE.IMP.GNFS.KD", "NE.EXP.GNFS.KD")) %>%
+    select(country, date, value, indicatorID) %>%
+    as_tibble() %>%
+    mutate(indicatorID = case_when(
+                            indicatorID == "NE.IMP.GNFS.KD" ~ "Imports",
+                            indicatorID == "NE.EXP.GNFS.KD" ~ "Exports",
+                            TRUE                            ~ indicatorID ),
+           date = as.numeric(date)) %>%
+
+    #Plot
+    ggplot() +
+    geom_point(aes(x = date, y = value, fill = indicatorID),
+               shape = 21,
+               color = "black",
+               show.legend = FALSE) +
+    geom_line(aes(x     = date,
+                  y     = value,
+                  group = indicatorID,
+                  color = indicatorID)) +
+    scale_y_continuous(labels = scales::number_format(scale    = 1e-12,
+                                                      suffix   = "B",
+                                                      accuracy = 1),
+                       breaks = seq(from = 0,
+                                    to   = 30e12,
+                                    by   = 5e12)) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    labs(x        = "Year",
+         y        = "Billions (Long scale)",
+         color    = "",
+         title    = "World imports and exports: 1970-2019",
+         subtitle = str_glue("Variables Units: constant USD Base Year 2010
+                              Imports WDI code : NE.IMP.GNFS.KD
+                              Exports WDI: NE.EXP.GNFS.KD"),
+         caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: 2020-07-01")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"))
+```
+
+# Key players in international business
+
+- __Multinational corporations (MNC)__: company with direct investments in multiple countries
+
+```{r, out.width="70%"}
+
+# Data
+read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue") %>%
+    html_table(fill = TRUE) %>%
+    .[[1]] %>%
+    as_tibble() %>%
+    select(2,4) %>%
+    set_names(nm = c("company_country", "revenue_gdp")) %>%
+    mutate(revenue_gdp = str_remove(string = revenue_gdp, pattern = "\\$*"),
+           revenue_gdp = str_remove(string = revenue_gdp, pattern = ","),
+           revenue_gdp = as.numeric(revenue_gdp)*1e6,
+           type        = "Company") %>%
+    slice_max(order_by = revenue_gdp, n = 5) %>%
+    bind_rows(wb(country = c("COL", "SWE", "THA", "ZAF", "FIN"),
+                 indicator = "NY.GDP.MKTP.CD",
+                 startdate = 2019,
+                 enddate = 2019) %>%
+                  select(country, value) %>%
+                  set_names(nm = c("company_country", "revenue_gdp")) %>%
+                  mutate(type = "Country")) %>%
+    # Plot
+    ggplot() +
+    geom_col(aes(x = revenue_gdp,
+                 y = fct_reorder(company_country, revenue_gdp),
+                 fill = type),
+             color = "black") +
+    scale_x_continuous(labels = scales::number_format(scale = 1e-9, suffix = "B"),
+                       breaks = seq(from = 0, to = 600e9, by = 100e9)) +
+    scale_fill_tq() +
+    labs(x        = "Revenue or GDP USD Billions (Short scale)",
+         y        = "Country or Company",
+         fill     = "",
+         title    = "Anual Revenue or GDP in year 2019",
+         subtitle = str_glue("Variables Units: current USD
+                              GDP WDI code : NY.GDP.MKTP.CD"),
+         caption  = str_glue("Source 1: World Development Indicators - World Bank,
+                              Last update: 2020-07-01
+                              Source 2: Fortune 500 - Fortune magazine")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          legend.position   = "bottom",
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"))
+```
+# Key players in international business
+
+- Entrepreneurs and small business
+
+    + __Born global company__: 
+    
+        + Adopts a global perspective
+        
+        + Engages in international business from or near its date of inception
+        
+        + Tend to have an innovative culture
+        
+        + Knowledge is consider as the most strategically significant resource of the company
+        
+        + Tend to use electronic commerce, if possible, to connect with clients and reduce costs
+        
+# What is globalization?
+
+- It is a process of integration and interdependence at different levels: economic, political, social, cultural, environmental, technological. 
+
+- Relative to the modern era, it began in the early 20th century with the development of transportation, communication, and the rise of global trade. 
+
+- However, with the First and Second World War this process stagnated and reemerged again in 1989 with the fall of the Berlin Wall, the subsequent dissolution of the Soviet Union and the development and adoption of the information and communication technologies (ICT) around the world.
+
+# What is globalization?
+
+- Areas of business in which globalization has had greater positive impacts:
+
+    + Markets
+    
+        + Reduction of marketing costs because of standarization
+        
+        + Creation of new opportunities when the local market is saturated
+        
+        + Reduction or mitigation of sales variation between seasons for products with international sales
+        
+        + Identification of niche markets where products offer by a company only need partial modifications to connect with the new client
+        
+        + Adoption of a social responsability policy because of the rise of the social media and the need to be more transparent with the stakeholders and the local environment where a company operates in other countries
+        
+# What is globalization?
+
+- Areas of business in which globalization has had greater positive impacts:
+
+    + Production
+    
+        + Reduction of overall productions costs by accessing low cost labor
+        
+        + Access to technical know-how from abroad
+        
+        + Access to inputs that are unavailable or costly in the domestic economy
+        
+# Forces driving globalization
+
+- Falling barries to trade and investment
+
+    + Background: 
+    
+      + 1947: General Agreement on Tariffs and Trade (GATT)
+      
+      + 1994: Revision of GATT
+      
+      + 1995: World Trade Organization (WTO)
+      
+    + WTO: intergovernmental organization dealing with the rules of trade between nations
+    
+        +  Operates a global system of trade rules
+      
+        + Acts as a forum for negotiating trade agreements
+      
+        + Settles trade disputes between its members
+      
+        + Supports the needs of developing countries
+        
+# Forces driving globalization
+
+- Falling barries to trade and investment
+
+    + Regional trade agreements (RTA)
+    
+        + Check out the __[RTA database](https://rtais.wto.org)__ notified to the GATT/WTO
+        
+        + For example exploring RTA related to Colombia through interactive visualization: __[RTA database](https://rtais.wto.org)__ > Select a country/territory > Colombia
+        
+        + If you want to explore RTA raw data: __[RTA database](https://rtais.wto.org)__ > Explore the data > Export all RTAs 
+
+# Forces driving globalization
+
+- Technological innovation
+
+    + E-commerce: use of computer networks to trade products 
+    
+        + Information and communication technologies (ICT) that apply mainly for the case of services
+        
+        + Advancements in transportation technologies that apply for the case of goods
+        
+# Measuring globalization
+
+- KOF Globalization Index
+
+    + The KOF Globalization Index measures the following dimensions of globalization:
+    
+        + Economic
+        
+        + Social
+        
+        + Political
+
+- Other indexes
+
+    + A complete survey can be found in [@caselliTryingMeasureGlobalization2012a, Chapter 3] using a state-based approach
+    
+        + A.T. Kearney/Foreign Policy Globalization Index
+        
+        + CSGR Globalisation Index
+        
+        + Maastricht Globalisation Index (MGI)
+        
+# Measuring globalization
+
+```{r, out.width="90%"}
+
+# Data
+get_dataset(set_name = "ds_globidx.v2019") %>%
+    .$ch.kof.globidx.v2019.gi.col %>%
+    as_tibble() %>%
+    set_names(nm = "value") %>%
+    mutate(country = "Colombia",
+           date = 1970:2017) %>%
+    bind_rows(get_dataset(set_name = "ds_globidx.v2019") %>%
+                  .$ch.kof.globidx.v2019.gi.wld  %>%
+                  as_tibble() %>%
+                  set_names(nm = "value") %>%
+                  mutate(country = "World",
+                         date = 1970:2017)) %>%
+  # Plot
+  ggplot() +
+  geom_point(aes(x = date, y = value, fill = country),
+             shape = 21,
+             color = "black",
+             show.legend = FALSE) +
+    geom_line(aes(x     = date,
+                  y     = value,
+                  group = country,
+                  color = country)) +
+    scale_color_tq() +
+    scale_fill_tq() +
+    labs(x        = "Year",
+         y        = "KOF index",
+         color    = "",
+         title    = "KOF Globalization Index for Colombia and the World: 1970-2017",
+         subtitle = str_glue("Colombia KOF index code: ch.kof.globidx.v2019.gi.col
+                              World KOF index code: ch.kof.globidx.v2019.gi.wld"),
+         caption  = str_glue("Source: KOF Swiss Economic Institute,
+                              Last update: 2019")) +
+    theme(panel.border      = element_rect(fill = NA, color = "black"),
+          plot.background   = element_rect(fill = "#f3fcfc"),
+          panel.background  = element_rect(fill = "#f3f7fc"),
+          legend.background = element_rect(fill = "#f3fcfc"),
+          legend.position   = "bottom",
+          plot.title        = element_text(face = "bold"),
+          axis.title        = element_text(face = "bold"),
+          legend.title      = element_text(face = "bold"),
+          axis.text         = element_text(face = "bold"))
+```
+
+# Debates about globalization
+
+- Jobs and wages: Globalization erodes standard of livings and ruins ways of life?
+
+    + Arguments against and in favor of globalization [@wildInternationalBusinessChallenges2020, Chapter 1, Section 1.4]
+    
+- Income inequality: Globalization increase inequality within nations, between nations or around the world?
+
+    + Inequality within nations
+    + Inequality Between nations
+    + Global inequality
+    
+      + The main debate in [wildInternationalBusinessChallenges2020, Chapter 1, Section 1.5] is about inequality. However, the authors mix the concepts of poverty and inequality several times, generating, _in my opinion_, confusion to the reader.
+      
+# Debates about globalization
+
+- Culture, Sovereignty and the Environment: Globalization eradicates cultural differences, erodes national sovereignty or isn't beneficial for the environment?
+
+    + Globalization and culture
+    
+    + Globalization and national sovereignty
+    
+    + Globalization and the environment
+
+# The global business environment
+
+- Forces of globalization
+- International business environment
+- Many national business environments
+- International company management
+
+# The global business environment
+
+- Global business environment scheme [@wildInternationalBusinessChallenges2020, Fig 1.3]
+
+```{r, out.width="55%"}
+
+include_graphics(path = "001.png")
+```
+
+# Acknowledgments
+
+- To my family that supports me
+
+- To the taxpayers of Colombia and the __[UMNG students](https://www.umng.edu.co/estudiante)__ who pay my salary
+
+- To the __[Business Science](https://www.business-science.io/)__ and __[R4DS Online Learning](https://www.rfordatasci.com/)__ communities where I learn __[R](https://www.r-project.org/about.html)__ 
+
+- To the __[R Core Team](https://www.r-project.org/contributors.html)__, the creators of __[RStudio IDE](https://rstudio.com/products/rstudio/)__ and the authors and maintainers of the packages __[tidyverse](https://CRAN.R-project.org/package=tidyverse)__, __[knitr](https://CRAN.R-project.org/package=knitr)__, __[tidyquant](https://CRAN.R-project.org/package=tidyquant)__, __[wbstats](https://CRAN.R-project.org/package=wbstats)__, __[rvest](https://CRAN.R-project.org/package=rvest)__, __[kofdata](https://CRAN.R-project.org/package=kofdata)__ and __[tinytex](https://CRAN.R-project.org/package=tinytex)__ for allowing me to access these tools without paying for a license
+
+- To the __[Linux kernel community](https://www.kernel.org/category/about.html)__ for allowing me the possibility to use some __[Linux distributions](https://static.lwn.net/Distributions/)__ as my main __[OS](https://en.wikipedia.org/wiki/Operating_system)__ without paying for a license
+      
+# References
