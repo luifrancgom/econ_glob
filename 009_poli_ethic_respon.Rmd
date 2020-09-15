@@ -1,6 +1,6 @@
 ---
 author: "Luis Francisco Gomez Lopez"
-date: 2020-09-07
+date: 2020-09-14
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -67,6 +67,7 @@ library(readxl)
 
 # Purpose
 
+Examine the main types of political, economical and legal systems around the world and understand the importance of ethical behavior and social responsibility in a international context
 
 #  Macroenvironment and the Company
 
