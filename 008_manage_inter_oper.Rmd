@@ -61,7 +61,7 @@ library(DiagrammeR)
 
 - The purpose of the virtual meetings is to answer questions and not to make a summary of the study material.
 
-- This presentation is based on [@wildInternationalBusinessChallenges2020, Chapter 15]
+- This presentation is based on [@wild_international_2019, Chapter 15]
 
 # Purpose
 
@@ -111,19 +111,19 @@ digraph boxes_and_circles {
 
 - Capacity planning
 
-    + Ability to produce enough output to satisfy market demand [@wildInternationalBusinessChallenges2020, Chapter 15, p 388]  
+    + Ability to produce enough output to satisfy market demand [@wild_international_2019, Chapter 15, p 388]  
 
 - Facilities location planning
 
-    + Selecting the location for production facilities [@wildInternationalBusinessChallenges2020, Chapter 15, p 388]
+    + Selecting the location for production facilities [@wild_international_2019, Chapter 15, p 388]
 
 - Process planning
 
-    + Deciding the process that the company will be use to create its product [@wildInternationalBusinessChallenges2020, Chapter 15, p 390]
+    + Deciding the process that the company will be use to create its product [@wild_international_2019, Chapter 15, p 390]
     
 - Facilities layout planning
 
-    + Deciding the spatial arrangement of production processes within production facilities [@wildInternationalBusinessChallenges2020, Chapter 15, p 391]
+    + Deciding the spatial arrangement of production processes within production facilities [@wild_international_2019, Chapter 15, p 391]
 
 # Acquiring physical resources
 
@@ -180,14 +180,14 @@ digraph boxes_and_circles {
 
 - Vertical integration
 
-    + Extension of company activities into stages in production that provide a company's inputs or absorb its output [@wildInternationalBusinessChallenges2020, Chapter 15, p 392]
+    + Extension of company activities into stages in production that provide a company's inputs or absorb its output [@wild_international_2019, Chapter 15, p 392]
     
         + Backward integration
         + Forward integration
         
 - Outsourcing
 
-    + The practice of buying from another company a product that is part of a company's value-added activities [@wildInternationalBusinessChallenges2020, Chapter 15, p 393]
+    + The practice of buying from another company a product that is part of a company's value-added activities [@wild_international_2019, Chapter 15, p 393]
 
 # Key production concerns
 
@@ -228,7 +228,7 @@ digraph boxes_and_circles {
 
 # Key production concerns
 
-- Quality improvement efforts [@wildInternationalBusinessChallenges2020, Chapter 15, p 395]
+- Quality improvement efforts [@wild_international_2019, Chapter 15, p 395]
 
     + Keep low production costs
     
