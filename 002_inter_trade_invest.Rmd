@@ -1,7 +1,7 @@
 ---
 title: "International trade and investment"
 author: Luis Francisco Gomez Lopez
-date: 2020-07-25
+date: 2020-01-28 17:57:27 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -60,48 +60,50 @@ Describe the theories about international trade and examine data about its benef
 ```{r exports_imports_col, out.width="90%"}
 
 # Data
-wb(country   = "COL",
-   indicator = c("NE.IMP.GNFS.KD", "NE.EXP.GNFS.KD")) %>%
-    select(country, date, value, indicatorID) %>%
-    as_tibble() %>%
-    mutate(indicatorID = case_when(
-                            indicatorID == "NE.IMP.GNFS.KD" ~ "Imports",
-                            indicatorID == "NE.EXP.GNFS.KD" ~ "Exports",
-                            TRUE                            ~ indicatorID ),
-           date = as.numeric(date)) %>%
-
-    #Plot
-    ggplot() +
-    geom_point(aes(x = date, y = value, fill = indicatorID),
-               shape = 21,
-               color = "black",
-               show.legend = FALSE) +
-    geom_line(aes(x     = date,
-                  y     = value,
-                  group = indicatorID,
-                  color = indicatorID)) +
-    scale_y_continuous(labels = scales::number_format(scale    = 1e-9,
-                                                      suffix   = "B",
-                                                      accuracy = 1)) +
-    scale_color_tq() +
-    scale_fill_tq() +
-    labs(x        = "Year",
-         y        = "Billions (Short scale)",
-         color    = "",
-         title    = "Colombia imports and exports: 1960-2019",
-         subtitle = str_glue("Variables Units: constant USD Base Year 2010
+data <- wbstats::wb_data(country   = "COL",
+                         indicator = c("NE.IMP.GNFS.KD", "NE.EXP.GNFS.KD"), 
+                         return_wide = FALSE) %>%
+  filter(!is.na(value))
+  
+data %>%   
+  select(country, date, value, indicator_id) %>% 
+  mutate(indicator_id = case_when(
+    indicator_id == "NE.IMP.GNFS.KD" ~ "Imports",
+    indicator_id == "NE.EXP.GNFS.KD" ~ "Exports",
+    TRUE                             ~ indicator_id)) %>%
+  
+  #Plot
+  ggplot() +
+  geom_point(aes(x = date, y = value, fill = indicator_id),
+             shape = 21,
+             color = "black",
+             show.legend = FALSE) +
+  geom_line(aes(x     = date,
+                y     = value,
+                group = indicator_id,
+                color = indicator_id)) +
+  scale_y_continuous(labels = scales::number_format(scale    = 1e-9,
+                                                    suffix   = "B",
+                                                    accuracy = 1)) +
+  scale_color_tq() +
+  scale_fill_tq() +
+  labs(x        = "Year",
+       y        = "Billions (Short scale)",
+       color    = "",
+       title    = str_glue("Colombia imports and exports: {min(data$date)}-{max(data$date)}"),
+       subtitle = str_glue("Variables Units: constant USD Base Year 2010
                               Imports WDI code : NE.IMP.GNFS.KD
                               Exports WDI: NE.EXP.GNFS.KD"),
-         caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-07-01")) +
-    theme(panel.border      = element_rect(fill = NA, color = "black"),
-          plot.background   = element_rect(fill = "#f3fcfc"),
-          panel.background  = element_rect(fill = "#f3f7fc"),
-          legend.background = element_rect(fill = "#f3fcfc"),
-          plot.title        = element_text(face = "bold"),
-          axis.title        = element_text(face = "bold"),
-          legend.title      = element_text(face = "bold"),
-          axis.text         = element_text(face = "bold"))
+       caption  = str_glue("Source: World Development Indicators - World Bank,
+                              Last update: {unique(data$last_updated)}")) +
+  theme(panel.border      = element_rect(fill = NA, color = "black"),
+        plot.background   = element_rect(fill = "#f3fcfc"),
+        panel.background  = element_rect(fill = "#f3f7fc"),
+        legend.background = element_rect(fill = "#f3fcfc"),
+        plot.title        = element_text(face = "bold"),
+        axis.title        = element_text(face = "bold"),
+        legend.title      = element_text(face = "bold"),
+        axis.text         = element_text(face = "bold"))
 ```
 
 # Volume of international trade
@@ -109,59 +111,55 @@ wb(country   = "COL",
 ```{r}
 
 # Clean data
-countries_iso3c_codes <- wbcountries() %>%
-    as_tibble() %>%
-    filter(!is.na(incomeID)) %>%
-    pull(iso3c)
-
-tbl_exports_imports <- wb(country   = countries_iso3c_codes,
-   indicator = c("BX.GSR.GNFS.CD", "BM.GSR.GNFS.CD","SP.POP.TOTL"),
-   startdate = 2019,
-   enddate   = 2019) %>%
-    as_tibble() %>%
-    arrange(desc(value)) %>%
-    select(iso3c, country, date, value, indicator) %>%
-    pivot_wider(iso3c:date, names_from = indicator, values_from = value) %>%
-    set_names(c("iso3c", "country", "date", "exports", "imports", "pop")) %>%
-    mutate(exports_pop = exports / pop,
-           imports_pop = imports / pop) %>%
-    mutate(text_exports = scales::dollar(exports, scale = 1e-9, suffix = "B", accuracy = 1),
-           text_imports = scales::dollar(imports, scale = 1e-9, suffix = "B", accuracy = 1),
-           text_exports_pop = scales::dollar(exports_pop),
-           text_imports_pop = scales::dollar(imports_pop))
+tbl_exports_imports <- wbstats::wb_data(indicator   = c("BX.GSR.GNFS.CD", 
+                                                        "BM.GSR.GNFS.CD",
+                                                        "SP.POP.TOTL"), 
+                                        return_wide = TRUE,
+                                        start_date  = 2019, 
+                                        end_date    = 2019) %>%
+  filter(across(BM.GSR.GNFS.CD:SP.POP.TOTL, .fns = ~ !is.na(.))) %>% 
+  # Transform data
+  select(country:SP.POP.TOTL) %>%
+  set_names(c("country", "date", "exports", "imports", "pop")) %>%
+  mutate(exports_pop = exports / pop,
+         imports_pop = imports / pop) %>%
+  mutate(text_exports = scales::dollar(exports, scale = 1e-9, suffix = "B", accuracy = 1),
+         text_imports = scales::dollar(imports, scale = 1e-9, suffix = "B", accuracy = 1),
+         text_exports_pop = scales::dollar(exports_pop),
+         text_imports_pop = scales::dollar(imports_pop))
 ```
 
 ```{r top_exporters_2019, out.width="90%"}
 
 tbl_exports_imports %>%
-    slice_max(order_by = exports, n = 10) %>%
-    select(iso3c, country, date, exports, text_exports) %>%
-    ggplot(aes(x = exports, y = fct_reorder(country, exports))) +
-    geom_point(size = 4,
-               color = palette_light()[[1]]) +
-    geom_label(aes(label = text_exports),
-               fill = palette_light()[[2]],
-               hjust = -0.5) +
-    geom_segment(aes(xend = 0, yend = country)) +
-    xlim(0, 4e12) +
-    labs(x        = "",
-         y        = "",
-         title    = "Top 10 exporters in year 2019",
-         subtitle = str_glue("Variables Units: current USD Billions (Long scale)
-                              Exports WDI code : BX.GSR.GNFS.CD"),
-         caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-07-01")) +
-    theme(panel.border      = element_rect(fill = NA, color = "black"),
-          plot.background   = element_rect(fill = "#f3fcfc"),
-          panel.background  = element_rect(fill = "#f3f7fc"),
-          legend.background = element_rect(fill = "#f3fcfc"),
-          legend.position   = "bottom",
-          plot.title        = element_text(face = "bold"),
-          axis.title        = element_text(face = "bold"),
-          legend.title      = element_text(face = "bold"),
-          axis.text         = element_text(face = "bold"),
-          axis.text.x       = element_blank(),
-          axis.ticks.x      = element_blank())
+  slice_max(order_by = exports, n = 10) %>%
+  select(country, date, exports, text_exports) %>%
+  ggplot(aes(x = exports, y = fct_reorder(country, exports))) +
+  geom_point(size = 4,
+             color = palette_light()[[1]]) +
+  geom_label(aes(label = text_exports),
+             fill = palette_light()[[2]],
+             hjust = -0.5) +
+  geom_segment(aes(xend = 0, yend = country)) +
+  xlim(0, 4e12) +
+  labs(x        = "",
+       y        = "",
+       title    = str_glue("Top 10 exporters in year {unique(tbl_exports_imports$date)}"),
+       subtitle = str_glue("Variables Units: current USD Billions (Long scale)
+                           Exports WDI code : BX.GSR.GNFS.CD"),
+       caption  = str_glue("Source: World Development Indicators - World Bank,
+                           Last update: 2020-12-16")) +
+  theme(panel.border      = element_rect(fill = NA, color = "black"),
+        plot.background   = element_rect(fill = "#f3fcfc"),
+        panel.background  = element_rect(fill = "#f3f7fc"),
+        legend.background = element_rect(fill = "#f3fcfc"),
+        legend.position   = "bottom",
+        plot.title        = element_text(face = "bold"),
+        axis.title        = element_text(face = "bold"),
+        legend.title      = element_text(face = "bold"),
+        axis.text         = element_text(face = "bold"),
+        axis.text.x       = element_blank(),
+        axis.ticks.x      = element_blank())
 ```
 
 # Volume of international trade
@@ -170,7 +168,7 @@ tbl_exports_imports %>%
 
 tbl_exports_imports %>%
     slice_max(order_by = imports, n = 10) %>%
-    select(iso3c, country, date, imports, text_imports) %>%
+    select(country, date, imports, text_imports) %>%
     ggplot(aes(x = imports, y = fct_reorder(country, imports))) +
     geom_point(size = 4,
                color = palette_light()[[1]]) +
@@ -181,11 +179,11 @@ tbl_exports_imports %>%
     xlim(0, 4e12) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 importers in year 2019",
+         title    = "Top 10 importers in year {unique(tbl_exports_imports$date)}",
          subtitle = str_glue("Variables Units: current USD Billions (Long scale)
                               Imports WDI code : BM.GSR.GNFS.CD"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-07-01")) +
+                              Last update: 2020-12-16")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -205,7 +203,7 @@ tbl_exports_imports %>%
 
 tbl_exports_imports %>%
     slice_max(order_by = exports_pop, n = 10) %>%
-    select(iso3c, country, date, exports_pop, text_exports_pop) %>%
+    select(country, date, exports_pop, text_exports_pop) %>%
     ggplot(aes(x = exports_pop, y = fct_reorder(country, exports_pop))) +
     geom_point(size = 4,
                color = palette_light()[[1]]) +
@@ -216,12 +214,12 @@ tbl_exports_imports %>%
     xlim(0, 25e4) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 per-capita exporters in year 2019",
+         title    = "Top 10 per-capita exporters in year {unique(tbl_exports_imports$date)}",
          subtitle = str_glue("Variables Units: current USD per inhabitant
                               Exports WDI code : BX.GSR.GNFS.CD,
                               Populations WDI code : SP.POP.TOTL"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-07-01")) +
+                              Last update: 2020-12-16")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -241,7 +239,7 @@ tbl_exports_imports %>%
 
 tbl_exports_imports %>%
     slice_max(order_by = imports_pop, n = 10) %>%
-    select(iso3c, country, date, imports_pop, text_imports_pop) %>%
+    select(country, date, imports_pop, text_imports_pop) %>%
     ggplot(aes(x = imports_pop, y = fct_reorder(country, imports_pop))) +
     geom_point(size = 4,
                color = palette_light()[[1]]) +
@@ -252,12 +250,12 @@ tbl_exports_imports %>%
     xlim(0, 25e4) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 per-capita importers in year 2019",
+         title    = "Top 10 per-capita importers in year {unique(tbl_exports_imports$date)}",
          subtitle = str_glue("Variables Units: current USD per inhabitant
                               Imports WDI code : BM.GSR.GNFS.CD,
                               Populations WDI code : SP.POP.TOTL"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-07-01")) +
+                              Last update: 2020-12-16")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
