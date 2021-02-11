@@ -179,7 +179,7 @@ tbl_exports_imports %>%
     xlim(0, 4e12) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 importers in year {unique(tbl_exports_imports$date)}",
+         title    = str_glue("Top 10 importers in year {unique(tbl_exports_imports$date)}"),
          subtitle = str_glue("Variables Units: current USD Billions (Long scale)
                               Imports WDI code : BM.GSR.GNFS.CD"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
@@ -214,7 +214,7 @@ tbl_exports_imports %>%
     xlim(0, 25e4) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 per-capita exporters in year {unique(tbl_exports_imports$date)}",
+         title    = str_glue("Top 10 per-capita exporters in year {unique(tbl_exports_imports$date)}"),
          subtitle = str_glue("Variables Units: current USD per inhabitant
                               Exports WDI code : BX.GSR.GNFS.CD,
                               Populations WDI code : SP.POP.TOTL"),
@@ -250,7 +250,7 @@ tbl_exports_imports %>%
     xlim(0, 25e4) +
     labs(x        = "",
          y        = "",
-         title    = "Top 10 per-capita importers in year {unique(tbl_exports_imports$date)}",
+         title    = str_glue("Top 10 per-capita importers in year {unique(tbl_exports_imports$date)}"),
          subtitle = str_glue("Variables Units: current USD per inhabitant
                               Imports WDI code : BM.GSR.GNFS.CD,
                               Populations WDI code : SP.POP.TOTL"),

@@ -1,7 +1,7 @@
 ---
 title: "International financial markets"
 author: Luis Francisco Gomez Lopez
-date: 2020-08-06
+date: 2020-02-11 15:23:33 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -96,9 +96,15 @@ Explain and describe the importance of the international capital market and its 
     
 # Exchange regime in Colombia
 
-- __EMI__ (__(IMC)__ in spanish) in Colombia [@banrep_banco_2020]
+- __EMI__ (__(IMC)__ in spanish) in Colombia [@banrep_banco_2021]
 
 ```{r}
+
+# Sistema Estadistico Cambiario SEC
+## https://quimbaya.banrep.gov.co/secinternet/ > 
+## Endeudamiento externo y avales >
+## Otros servicios >
+## Consultar lista de intermediarios del mercado cambiario
 
 read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   select(2,3) %>% 
@@ -108,24 +114,24 @@ read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2020-08-12"))
+                      "Lat update: 2021-02-11"))
 ```
 
 # Exchange regime in Colombia
 
-- __EMI__ (__(IMC)__ in spanish) in Colombia [@banrep_banco_2020]
+- __EMI__ (__(IMC)__ in spanish) in Colombia [@banrep_banco_2021]
 
 ```{r}
 
 read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   select(2,3) %>% 
   set_names(nm = c("NIT", "Name")) %>% 
-  slice(23:44) %>% 
+  slice(23:43) %>% 
   kable(format = "latex", booktabs = TRUE) %>% 
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2020-08-12"))
+                      "Lat update: 2021-02-11"))
 ```
 
 # Exchange rates
@@ -163,7 +169,7 @@ cop_usd %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_usd$symbol)}
                              Highest price of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2020-08-12")) +
+                             Last update date: 2021-02-11")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -192,7 +198,7 @@ cop_eur %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_eur$symbol)}
                              Highest prices of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2020-08-12")) +
+                             Last update date: 2021-02-11")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -221,7 +227,7 @@ cop_gbp %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_gbp$symbol)}
                              Highest prices of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2020-08-12")) +
+                             Last update date: 2021-02-11")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
