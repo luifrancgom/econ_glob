@@ -1,7 +1,7 @@
 ---
 title: "International monetary system"
 author: "Luis Francisco Gomez Lopez"
-date: 2020-08-18
+date: 2021-02-19 16:30:17 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -94,7 +94,7 @@ Analyze the importance of exchange rates to international business management an
         
         + For saturdays, sundays, holidays and those in which the Banco de la República does not provide the services of the "Sistema de Cuentas de Depósito", the MRE in force on the immediately following business day will apply
         
-    + __Data source__: https://www.banrep.gov.co/ > Estadísticas > Tasas de cambio, sector externo y derivados > 1. Tasas de cambio > Tasa Representativa del Mercado (TRM - Peso por dólar) > Descargar y consultar: Serie histórica para un rango de fechas dado (desde 27/11/1991)
+    + __Data source__: https://www.banrep.gov.co/ > Estadísticas > ¡NUEVO! Estadísticas Banrep >  CATÁLOGO DE SERIES > Tasas de cambio y sector externo > Tasas de cambio nominales > Tasa Representativa del Mercado (TRM) > DESCARGAR
     
 # Analysis of exchange rates
 
@@ -103,44 +103,41 @@ Analyze the importance of exchange rates to international business management an
 ```{r, out.width="80%"}
 
 # Data
-cop_usd_trm <- read_csv(file   = "005_trm_cop_usd_consolidado_series.csv", 
-                        locale = locale(decimal_mark = ",")) %>% 
-    select(`Fecha (dd/mm/aaaa)`, TRM) %>% 
-    set_names(nm = c("date", "trm")) %>% 
-    arrange(date) %>% 
-    mutate(trm_change = (trm - lag(trm)))
+cop_usd_trm <- read_csv(file   = "005_trm_cop_usd_consolidado_series.csv") %>% 
+  set_names(nm = c("date", "trm")) %>% 
+  mutate(trm_change = (trm - lag(trm)))
 
-    # Plot
+# Plot
 cop_usd_trm %>%
-    ggplot(aes(x = date, y = trm)) +
-    geom_line(color = palette_light()[[1]]) +
-    geom_vline(xintercept = ymd("1999-09-25"),
-               color      = palette_light()[[3]]) +
-    annotate(x     = ymd("1995-01-01"), 
-             y     = 3500, 
-             geom  = "label",
-             color = "white",
-             fill  = palette_light()[[1]],
-             label = str_glue("On 1999-09-25
+  ggplot(aes(x = date, y = trm)) +
+  geom_line(color = palette_light()[[1]]) +
+  geom_vline(xintercept = ymd("1999-09-25"),
+             color      = palette_light()[[3]]) +
+  annotate(x     = ymd("1995-01-01"), 
+           y     = 3500, 
+           geom  = "label",
+           color = "white",
+           fill  = palette_light()[[1]],
+           label = str_glue("On 1999-09-25
                               the currency band system 
                               was abandoned by
                               the Bank of the
                               Republic")) +
-    labs(x        = "",
-         y        = "COP/USD",
-         title    = "Daily MRE (COP/USD)", 
-         subtitle = str_glue("Period: {cop_usd_trm$date[1]} - {cop_usd_trm$date[length(cop_usd_trm$date)]},
+  labs(x        = "",
+       y        = "COP/USD",
+       title    = "Daily MRE (COP/USD)", 
+       subtitle = str_glue("Period: {cop_usd_trm$date[1]} - {cop_usd_trm$date[length(cop_usd_trm$date)]},
                              Observations: {length(cop_usd_trm$trm)}"),
-         caption  = str_glue("Data source: Banco de la República (Colombia) & Superintendencia Financiera de Colombia (SFC) 
+       caption  = str_glue("Data source: Banco de la República (Colombia) & Superintendencia Financiera de Colombia (SFC) 
                              Last update: {cop_usd_trm$date[length(cop_usd_trm$date)]}")) +
-    theme(panel.border      = element_rect(fill = NA, color = "black"),
-          plot.background   = element_rect(fill = "#f3fcfc"),
-          panel.background  = element_rect(fill = "#f3f7fc"),
-          legend.background = element_rect(fill = "#f3fcfc"),
-          plot.title        = element_text(face = "bold"),
-          axis.title        = element_text(face = "bold"),
-          legend.title      = element_text(face = "bold"),
-          axis.text         = element_text(face = "bold"))
+  theme(panel.border      = element_rect(fill = NA, color = "black"),
+        plot.background   = element_rect(fill = "#f3fcfc"),
+        panel.background  = element_rect(fill = "#f3f7fc"),
+        legend.background = element_rect(fill = "#f3fcfc"),
+        plot.title        = element_text(face = "bold"),
+        axis.title        = element_text(face = "bold"),
+        legend.title      = element_text(face = "bold"),
+        axis.text         = element_text(face = "bold"))
 ```
 
 # Analysis of exchange rates
@@ -193,7 +190,7 @@ cop_usd_trm %>%
     # Plot
 cop_usd_trm %>% 
     ggplot() + 
-    geom_histogram(aes(x = trm, y = ..density..),
+    geom_histogram(aes(x = trm, y = after_stat(density)),
                    bins     = bins + 1, 
                    color    = "black", 
                    fill     = palette_light()[[1]],
@@ -349,7 +346,8 @@ cop_usd_trm_filter %>%
                              Excluding observations with daily change equal to zero"), 
          subtitle = str_glue("Bins: {bins},
                              Observations: {length(cop_usd_trm_filter$trm_change[!is.na(cop_usd_trm_filter$trm_change)])}"),
-         caption  = str_glue("Data source: Banco de la República (Colombia) & Superintendencia Financiera de Colombia (SFC)")) +
+         caption  = str_glue("Data source: Banco de la República (Colombia) & Superintendencia Financiera de Colombia (SFC) 
+                             Last update: {cop_usd_trm$date[length(cop_usd_trm$date)]}")) +
     annotate(geom  = "label", 
              x     = 140.02, 
              y     = 0.06,
@@ -449,81 +447,79 @@ $$\begin{split}
 
 # Calculate montly mean trm to convert data into monthly
 cop_usd_trm_mean_month <- cop_usd_trm %>%
-    select(date, trm) %>% 
-    filter(between(x     = date, 
-                   left  = ymd("1991-12-01"), 
-                   right = ymd("2020-07-31"))) %>%
-    summarize_by_time(.date_var = date, 
-                      .by       = "month", 
-                      value     = mean(trm)) %>%
-    set_names(nm = c("date", "trm_mean_month"))
+  filter_by_time(.date_var   = date, 
+                 .start_date = "1991-12-01", 
+                 .end_date   = floor_date(max(cop_usd_trm$date), unit = "month") %-time% "1 day") %>% 
+  summarize_by_time(.date_var = date, 
+                    .by       = "month", 
+                    value     = mean(trm)) %>%
+  set_names(nm = c("date", "trm_mean_month"))
 
 # Information about interest rates in COL and USA
 i_col_usa <- tq_get(x    = c("COLIR3TCD01STM", "IR3TCD01USM156N"), 
        get  = "economic.data",
-       from = "1991-12-01",
        # There is missing data in 2020-04-01 for USA (IR3TCD01USM156N)
-       to   = "2020-03-01") %>%
-    pivot_wider(id_cols = date, 
-                names_from  = symbol,
-                values_from = price) %>%
-    set_names(nm = c("date", "i_col", "i_usa"))
+       from = "1991-12-01") %>%
+  pivot_wider(id_cols = date, 
+              names_from  = symbol,
+              values_from = price) %>%
+  set_names(nm = c("date", "i_col", "i_usa"))
 
 # Joining data about trm COP/USA and interest rates in COL and USA 
-i_col_usa_trm <- i_col_usa %>% 
-    left_join(y  = cop_usd_trm_mean_month,
-              by = "date") %>%
-    # Expressing interest rates without percent
-    mutate(i_col = i_col / 100,
-           i_usa = i_usa / 100)
+i_col_usa_trm <- i_col_usa %>%
+  left_join(y  = cop_usd_trm_mean_month,
+            by = "date") %>%
+  # Expressing interest rates without percent
+  mutate(i_col = i_col / 100,
+         i_usa = i_usa / 100)
+
 
 # Comparing forecasts with actual values
 i_col_usa_trm_forecast <- i_col_usa_trm %>%
-    mutate(trm_forecast_3_month = ((1 + i_col) / (1 + i_usa)) * trm_mean_month) %>%
-    select(date, trm_forecast_3_month) %>%
-    mutate(date = date %m+% period("3 months")) %>%
-    left_join(i_col_usa_trm, by = "date") %>% 
-    select(date, trm_mean_month, trm_forecast_3_month) %>% 
-    # Dropping forecasts because I don't nothing to compare with
-    drop_na() %>% 
-    mutate(error = abs(trm_mean_month - trm_forecast_3_month)) 
+  mutate(trm_forecast_3_month = ((1 + i_col) / (1 + i_usa)) * trm_mean_month) %>%
+  select(date, trm_forecast_3_month) %>%
+  mutate(date = date %m+% period("3 months")) %>%
+  left_join(i_col_usa_trm, by = "date") %>% 
+  select(date, trm_mean_month, trm_forecast_3_month) %>% 
+  # Dropping forecasts because I don't nothing to compare with
+  drop_na() %>% 
+  mutate(error = abs(trm_mean_month - trm_forecast_3_month))
 
 # Plot
 
-  # Data
+# Data
 clean_data <- i_col_usa_trm_forecast %>%
-    select(date, trm_mean_month, trm_forecast_3_month) %>% 
-    pivot_longer(cols = trm_mean_month:trm_forecast_3_month) %>% 
-    mutate(name = case_when(
-                    name == "trm_mean_month"       ~ "Actual value",
-                    name == "trm_forecast_3_month" ~ "Forecast",
-                    TRUE ~ name),
-           date = ceiling_date(date, unit = "month") %-time% "1 day")
+  select(date, trm_mean_month, trm_forecast_3_month) %>% 
+  pivot_longer(cols = trm_mean_month:trm_forecast_3_month) %>% 
+  mutate(name = case_when(
+    name == "trm_mean_month"       ~ "Actual value",
+    name == "trm_forecast_3_month" ~ "Forecast",
+    TRUE ~ name),
+    date = ceiling_date(date, unit = "month") %-time% "1 day")
 
-    # Clean plot
-    clean_data %>% 
-    ggplot() +
-    geom_line(aes(x     = date,
-                  y     = value,
-                  group = name,
-                  color = name)) +
-    scale_color_tq() +
-    labs(x        = "",
-         y        = "COP/USD",
-         color    = "",
-         title    = "Forecasting Monthly mean Market Representative Exchange Rate (MRE)",
-         subtitle = str_glue("Period: {clean_data$date[1]} - {clean_data$date[length(clean_data$date)]},
+# Clean plot
+clean_data %>% 
+  ggplot() +
+  geom_line(aes(x     = date,
+                y     = value,
+                group = name,
+                color = name)) +
+  scale_color_tq() +
+  labs(x        = "",
+       y        = "COP/USD",
+       color    = "",
+       title    = "Forecasting Monthly mean Market Representative Exchange Rate (MRE)",
+       subtitle = str_glue("Period: {clean_data$date[1]} - {clean_data$date[length(clean_data$date)]},
                              Observations: {length(clean_data$date) / 2}")) +
-    theme(panel.border      = element_rect(fill = NA, color = "black"),
-          plot.background   = element_rect(fill = "#f3fcfc"),
-          panel.background  = element_rect(fill = "#f3f7fc"),
-          legend.background = element_rect(fill = "#f3fcfc"),
-          plot.title        = element_text(face = "bold"),
-          axis.title        = element_text(face = "bold"),
-          legend.title      = element_text(face = "bold"),
-          legend.position   = "bottom",
-          axis.text         = element_text(face = "bold"))
-    
+  theme(panel.border      = element_rect(fill = NA, color = "black"),
+        plot.background   = element_rect(fill = "#f3fcfc"),
+        panel.background  = element_rect(fill = "#f3f7fc"),
+        legend.background = element_rect(fill = "#f3fcfc"),
+        plot.title        = element_text(face = "bold"),
+        axis.title        = element_text(face = "bold"),
+        legend.title      = element_text(face = "bold"),
+        legend.position   = "bottom",
+        axis.text         = element_text(face = "bold"))
 ```
 
 # Simple model of exchange rate determination
@@ -534,7 +530,7 @@ clean_data <- i_col_usa_trm_forecast %>%
 
 i_col_usa_trm_forecast %>% 
     ggplot() + 
-    geom_histogram(aes(x = error, y = ..density..),
+    geom_histogram(aes(x = error, y = after_stat(density)),
                    bins = bins + 1, 
                    color = "black", 
                    fill  = palette_light()[[1]],
@@ -566,7 +562,7 @@ i_col_usa_trm_forecast %>%
                              Bins: {bins}")) +
     annotate(geom  = "label",
              x     = 450,
-             y     = 0.004,
+             y     = 0.003,
              label = str_glue("Mean: {mean(i_col_usa_trm_forecast$error) %>% round(digits = 2)}
                               Median: {median(i_col_usa_trm_forecast$error) %>% round(digits = 2)}
                               Standard deviation: {sd(i_col_usa_trm_forecast$error) %>% round(digits = 2)}

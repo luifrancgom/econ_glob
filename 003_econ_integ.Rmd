@@ -1,7 +1,7 @@
 ---
 title: "Regional economic integration"
 author: Luis Francisco Gomez Lopez
-date: 2020-02-05 18:54:03 GMT -05:00
+date: 2021-02-05 18:54:03 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -206,7 +206,7 @@ read_csv("003_all_rta.csv") %>%
     kable(format = "latex", booktabs = TRUE, caption = "Colombia RTAs in force by type reported to WTO") %>% 
     kable_styling(font_size = 7, latex_options = "striped") %>% 
     row_spec(row = 0, bold = TRUE) %>% 
-    footnote(number = c("Source: RTA database - WTO & OMC", "Last update: 2020-02-04"))
+    footnote(number = c("Source: RTA database - WTO & OMC", "Last update: 2021-02-04"))
 ```
 
 # Integration in Europe
