@@ -1,7 +1,7 @@
 ---
 title: "Analyzing international opportunities"
 author: "Luis Francisco Gomez Lopez"
-date: 2020-08-25
+date: 2021-02-26 18:57:41 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -168,7 +168,7 @@ region_doing_business_score_2019 <- doing_business_score_2019 %>%
          subtitle = str_glue("0 = lowest performance to 100 = best performance
                               Doing Business code: IC.BUS.DFRN.XQ"),
          caption  = str_glue("Source: Doing Business - World Bank
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -214,7 +214,7 @@ top_country_doing_business_score_2019 %>%
          subtitle = str_glue("0 = lowest performance to 100 = best performance
                               Doing Business code: IC.BUS.DFRN.XQ"),
          caption  = str_glue("Source: Doing Business - World Bank
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -260,7 +260,7 @@ low_country_doing_business_score_2019 %>%
          subtitle = str_glue("0 = lowest performance to 100 = best performance
                               Doing Business code: IC.BUS.DFRN.XQ"),
          caption  = str_glue("Source: Doing Business - World Bank
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -373,7 +373,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: Kilowatt-hour per capita
                               Variable WDI code : {variable_codes[1]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -415,7 +415,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: percent
                               Variable WDI code : {variable_codes[2]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -459,7 +459,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: International constant USD (PPP) (Base year = 2017)
                               Variable WDI code : {variable_codes[3]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -501,7 +501,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: percent of total working-age population with advanced education
                               Variable WDI code : {variable_codes[4]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -542,7 +542,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: number of subscriptions per 100 people
                               Variable WDI code : {variable_codes[5]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -583,7 +583,7 @@ countries_selected_data %>%
          subtitle = str_glue("Variables units: sum of exports and imports as percent of GDP
                               Variable WDI code : {variable_codes[6]}"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-08-18")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),

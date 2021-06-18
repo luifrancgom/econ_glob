@@ -1,0 +1,4116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]</text>
+    </category>
+    <info format="html">
+      <text><![CDATA[<p>Test Bank <br></p><p>Elective I: Economic Globalization</p><p>Luis Francisco Gomez Lopez<br></p><p>Business Administration</p><p>Distance Learning Faculty<br></p>]]></text>
+    </info>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild </text>
+    </category>
+    <info format="html">
+      <text><![CDATA[Questions based on the book <b>Globalization from&nbsp; International Business: The Challenges of Globalization (2020)</b> by Wild, John J, and Kenneth L Wild<br>]]></text>
+    </info>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 1 Globalization</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3796972  -->
+  <question type="multichoice">
+    <name>
+      <text>Elements of Technological Innovation related to Globalization</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the elements
+that played
+a role in fostering globalization related to technology were</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 39 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The developments regarding the
+i<span lang="en-US">nformation
+and communications technologies (ICT) </span><span lang="en-US">and
+the advancements in transportation </span><span lang="en-US">technologies
+</span><span lang="en-US">like
+global positioning systems</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The reduction of costs in the transportation sector and the market
+penetration of cellphones in conjunction with internet that allowed
+people to communicate around the world</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">The sustained
+increase in demand for computers worldwide and </span><span lang="en-US">the
+</span><span lang="en-US">access
+to low-cost software </span><span lang="en-US">that
+allowed the rapid expansion and development </span><span lang="en-US">of
+</span>mobile application<span lang="en-US">s</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796960  -->
+  <question type="multichoice">
+    <name>
+      <text>First age of globalization</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the first age
+of globalization corresponds to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 pages 33-34 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The
+end of the 19th century and the beginnings of the 20th century where
+labor was highly mobile, trade and capital flowed more freely and
+where conventional modes of transportation evolved</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The end of the Second World War where global trade was able to
+recover and trade barriers decreased progressively with the entry
+into force of the General Agreement on Tariffs and Trade (GATT)</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The fall
+of the Berlin Wall, the dissolution of the Soviet Union that
+integrates the eastern and western economies and the development of
+the i<span lang="en-US">nformation
+and communications technologies (ICT)</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796919  -->
+  <question type="multichoice">
+    <name>
+      <text>Global born company</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild a global born
+company refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 32 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+An enterprise that adopts a global
+perspective and engages in international business from or near its
+inception where tends to be innovative and knowledge based</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A company generally made up by
+entrepreneurs and characterized as a small business who obtains
+financial resources from joint global ventures arrangements</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+An infant company which in its
+early stages of consolidation experiences relative difficulty or is
+incapable  of competing with established competitors around the globe</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796959  -->
+  <question type="multichoice">
+    <name>
+      <text>Globalization</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild globalization
+is define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 33 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A trend toward greater technological, cultural, political and
+economical interdependence among economies and national institutions
+characterized by denationalization</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A process of interaction and integration among individuals,
+enterprises, governments and regions around the globe which is
+consider as a form of capitalist expansion</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A natural consequence of the opening up of the global economy and the
+result of increasing cultural global exchange, political
+international integration and trade between nations</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796961  -->
+  <question type="multichoice">
+    <name>
+      <text>Globalization of markets</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the
+globalization of markets refers to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 34 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+convergence of buyer preferences around the globe which benefits
+companies through standardizing market activities, creating
+opportunities abroad and decreasing sales variability for
+international products</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The process of adjusting the marketing strategies of a company to
+adapt to the conditions of other countries that entails the full
+process of planning, creating, positioning, and promoting products in
+the global economy</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">The strategy
+where </span><span lang="en-US">a
+single product is sold according to a single standard marketing
+program </span><span lang="en-US">to
+reduce costs and </span><span lang="en-US">adapt it later for
+local needs</span><span lang="en-US">
+in the context of a global economy with the objective of facilitating
+the operations of the enterprise</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796964  -->
+  <question type="multichoice">
+    <name>
+      <text>Globalization of production</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the
+globalization of production
+refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 35 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The allocation of production activities to locations abroad where
+companies can reduce costs and maximize the quality of the products
+they offer</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">D</span><span lang="en-US">esigning
+and </span><span lang="en-US">managing</span><span lang="en-US">
+the process of production and redesigning business operations </span><span lang="en-US">of
+products in the context of international operations and the global
+economy</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">The
+specialization and diversification of manufacturing decisions </span><span lang="en-US">and
+the adoption of production management strategies using a global
+perspective to trade goods </span>
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796971  -->
+  <question type="multichoice">
+    <name>
+      <text>Gross Domestic Product (GDP)</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the Gross
+Domestic Product (GDP) refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 38 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The value of all goods and services produced by a domestic
+economy in a specific period</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The nation’s income generated
+from exports, imports and
+the international operations of its companies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The internal final production like
+commodities offered by a specific territory to the rest of the world</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796976  -->
+  <question type="multichoice">
+    <name>
+      <text>Inequality debate</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the
+conclusion about the income
+inequality debate is
+that</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 44 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Globalization increases the incomes of poor people within nations,
+fosters economic growth for economies that integrate into the global
+economy, and has decreased global inequality</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Globalization doesn’t boost the incomes of poor people within
+nations, but fosters economic growth for economies that integrate
+into the global economy, and doesn’t affect global inequality</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Globalization boosts income of poor people within nations, however
+doesn’t foster economic growth for economies that  integrates to
+the global economy and increase global inequality</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796917  -->
+  <question type="multichoice">
+    <name>
+      <text>International business</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the term
+international business refers to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 30 in the book International Business: The
+Challenges of Globalization (2020) 
+</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Any commercial transaction of goods and services that crosses the
+borders of two or more countries in the global economy</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The study of the
+internationalization process of multinational global enterprises and
+the economic and financial globalization</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+All the activities related to international business markets and the
+identification of relevant business global opportunities</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796974  -->
+  <question type="multichoice">
+    <name>
+      <text>Job and wages debate</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the
+conclusion about the job and wages debate
+is that</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 44 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p align="justify">
+Globalization eliminates jobs but creates also jobs in other sector
+of the economy and generates greater benefits at the national level</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">G</span><span lang="en-US">lobalization
+eliminates jobs in develop countries, </span><span lang="en-US">lower
+wages in develop countries and exploit workers in developing
+countries</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Globalization increases wealth ad efficiency in all nations and
+generates labor market flexibility in developed nations 
+</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796920  -->
+  <question type="multichoice">
+    <name>
+      <text>Key to global success</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the keys to
+global success are related to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 32 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Monitor global markets, communicate
+effectively, know the costumer, market effectively and have global
+awareness</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Build a global vision, stay update
+in innovation , identify relevant opportunities in the global economy
+and be flexible</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Have and open mind, tolerate the
+cultural differences, understand the global perspective of businesses
+and by efficient 
+</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796973  -->
+  <question type="multichoice">
+    <name>
+      <text>KOF Index</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the KOF index
+refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 1 page 42 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A </span><span lang="en-US">measure
+created by the KOF Swiss Economic Institute to explore </span><span lang="en-US">the
+ec</span><span lang="en-US">onomic,
+social and political dimensions of </span><span lang="en-US">globalization</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">An indicator to measure the barriers and obstacles
+of international trade around the world created by the </span><span lang="en-US">Maastricht
+University</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A</span><span lang="en-US">n economic variable
+created by the Foreign Policy magazine to describe the behavior of
+globalization in relation to trade and technology </span>
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796968  -->
+  <question type="multichoice">
+    <name>
+      <text>Major flaw in GATT</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the major
+flaw in the General
+Agreement on Tariffs and Trade (GATT) was
+that</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 35 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+It
+was an agreement that lacked the power to enforce world trade rules
+between countries around the globe</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+It was not necessary taking into account the creation and
+consolidation of the World Trade Organization (WTO)</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+It was outdated because it had not been revised since 1947, where it
+did not reflect the changes of international trade</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796918  -->
+  <question type="multichoice">
+    <name>
+      <text>Multinational corporation</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild a
+multinational corporation is</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 30 in the book International Business: The
+Challenges of Globalization (2020) 
+</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">A business that has direct investments abroad in multiples countries
+and that is a key player in international business because of its
+revenues and jobs it creates</p><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+A corporate organization that owns or controls production of goods or
+services in at least two different continents and their worldwide
+activities are centrally controlled</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+An enterprise operating in one
+country
+but managed from several
+countries that derives the majority of its revenue from operations
+and production outside of its home country</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796970  -->
+  <question type="multichoice">
+    <name>
+      <text>World Bank and International Monetary Fund</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the World
+Bank and the International Monetary Fund are</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 1 page 37 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Agencies created to provide financial aid to developing countries and
+enforce the rules of the international monetary system</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Agencies created to enforce the
+rules of trade and and the
+implementation of modern
+customs systems and procedures around
+the globe</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Agencies created to achieve international cooperation and be a center
+for harmonizing the actions related to the international financial
+system</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 5 International Trade Theory</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3796989  -->
+  <question type="multichoice">
+    <name>
+      <text>Absolute and comparative advantage</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild  the
+concepts of absolute and comparative advantage can be used to
+conclude that</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 pages 163-166 in the book International Business:
+The Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p align="justify">
+<span lang="en-US">It is not
+possible that a country doesn’t have a comparative advantage </span><span lang="en-US">in
+some good but it is possible that the country doesn’t have an
+absolute advantage</span></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">I</span><span lang="en-US">f
+a country doesn’t have and absolute advantage in the production of
+any good then doesn’t exist a benefit to trade with this country</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A country can simultaneously have an absolute and comparative
+advantage in all goods relative to all countries in a global economy</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796982  -->
+  <question type="multichoice">
+    <name>
+      <text>Benefits of international trade</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the benefits
+of international trade are</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 5 page 156 in the book International Business: The
+Challenges of Globalization (2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+An
+increase in the choice of goods and services and an engine for job
+creation in the export sector</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Improving the efficiency of markets by making markets more
+contestable and generating more consumption</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Generating welfare gains by increasing innovation and technology
+transfers from other countries</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796992  -->
+  <question type="multichoice">
+    <name>
+      <text>Factor proportions theory</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the relation between the
+factors proportions theory and the theory of comparative advantage is
+that<br></p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 167 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The factors proportions theory differs from the theory of comparative
+advantage because it is based on <span lang="en-US">the abundance of
+</span><span lang="en-US">factors of production</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The factors proportions theory is an extension of the theory of
+comparative advantage which includes the capital as an input in
+addition to labor</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The factors proportions theory negates the theory of comparative
+advantage and supports the concept of absolute advantage in relation
+to trade 
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796979  -->
+  <question type="multichoice">
+    <name>
+      <text>International trade</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the value of
+trade can be measure as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 156 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The sum of exports and imports divided by the Gross Domestic Product
+and multiply by 100 where it can be equal to, less than o greater
+that 100%</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">The </span><span lang="en-US">difference</span><span lang="en-US">
+between exports and imports</span>
+as a share of  Gross
+Domestic Product and multiply by 100 where
+its maximum value is 100%</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">The
+</span><span lang="en-US">multiplication
+</span><span lang="en-US">between
+exports and imports</span>
+as a share of  Gross
+Domestic Product and multiply by 100 where
+its minimum value is 100%</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796993  -->
+  <question type="multichoice">
+    <name>
+      <text>Leontief paradox</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the Leontief
+paradox refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 167 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A study by Wassily Leontief showing that United
+States had an abundance of capital but exports </span><span lang="en-US">labor-intensive
+products contradicting the factor proportions theory</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A study by Wassily Leontief demonstrating that the theory of
+comparative advantage didn’t apply to the United States economy in
+relation to other countries of the global economy</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A study by Wassily Leontief showing that although United States had
+an absolute advantage in the production of certain goods it didn’t
+exports those goods</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796987  -->
+  <question type="multichoice">
+    <name>
+      <text>Mercantilism</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the three
+pillars of mercantilism are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 161 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">W</span><span lang="en-US">ealth
+in a nation is related to a positive trade surplus, government
+protects domestic industries and colonialism is used to obtain raw
+materials</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">W</span><span lang="en-US">ealth
+in a nation is related to a negative trade deficit, government
+subsidies </span><span lang="en-US">imports
+and colonialism is used to control strategic resources</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">W</span><span lang="en-US">ealth
+in a nation is related to a neutral balance of trade, government
+protects the national industries and colonialism </span><span lang="en-US">must
+</span><span lang="en-US">foster
+imports</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796995  -->
+  <question type="multichoice">
+    <name>
+      <text>National competitive advantage</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the main
+objective of the national competitive advantage theory is to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 171 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Explain why certain countries are more competitive in the production
+of certain goods and services</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Explain trading patterns of imports and exports that are presented
+within and between regions</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Explain the relation between market structures and the level of
+innovation in the global economy</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796994  -->
+  <question type="multichoice">
+    <name>
+      <text>New trade theory</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the
+first-mover advantage in the context of new theory establishes that</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 170 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A company that enters a market first, in the context of international
+trade, can create barriers to entry for other companies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A company that is a pioneer in its industry is more likely to be more
+innovative and efficient in the international markets</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A company that manages to position itself in international markets is
+necessarily a leader in the local market and becomes a monopoly</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3796985  -->
+  <question type="multichoice">
+    <name>
+      <text>Volume of international trade</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the volume
+of international trade <span lang="en-US">and
+the world output behaves such that</span></p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 5 page 156 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+volume of trade grows faster than world output and these variables
+are positively related</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+volume of trade grows slower than world output and these variables
+are negatively related</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+volume of trade grows at the same rate as world output and these
+variables are not related</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 9 International Financial Markets</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3835003  -->
+  <question type="multichoice">
+    <name>
+      <text>Capital market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild a capital
+market es define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 249 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A system that allocates financial resources in the form of dept and
+equity according to their most efficient uses</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A financial market in which long-term debt or equity are bought and
+sold in an international environment</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+market
+for long-term securities,
+including the stock
+and
+bond
+market,
+where
+buyers and sellers engage in international
+trade</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835017  -->
+  <question type="multichoice">
+    <name>
+      <text>Countertrade</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild counter-trade
+is</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US"></span><span lang="en-US"><p align="justify">
+Checkout Chapter 9 page 264 in the book International Business: The
+Challenges of Globalization (2020)</p><br></span></p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+practice of exchanging goods or services which are paid for, in whole
+or part, with other goods or services as opposed with currency</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">T</span><span lang="en-US">he
+practice of restricting the trade of goods and services to control
+the exchange rates </span><span lang="en-US">in
+a domestic economy and applied by central banks</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">The practice of
+using strategic trade policy </span><span lang="en-US">in
+order to affect the outcome of interactions between </span><span lang="en-US">the
+participants of the foreign exchange market</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835008  -->
+  <question type="multichoice">
+    <name>
+      <text>Eurobond</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild an Eurobond
+is</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 252 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify"><p align="justify">
+A bond
+issued outside a domestic economy in a currency not native to the
+economy where it is issued</p><br></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A international financial instrument issued in euros by governments
+belonging to the European Union 
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A collateral that
+is exchanged in the eurozone
+whose main purpose is to
+protect the interests of the lender</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835002  -->
+  <question type="multichoice">
+    <name>
+      <text>Financial markets</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the
+financial markets are essential to the international business because</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 248 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+They allocate money from organizations and economies with excess
+funds to those with shortages and allow companies to exchange one
+currency for another</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+They
+play a major role in the economic growth of a
+country acting as an intermediary between savers and investors
+to allocate goods and services in an efficient way</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+They serve as a mechanism to deploy
+capital or money
+to its most efficient use enabling  savers from across the world to
+invest their money in distant emerging economies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835005  -->
+  <question type="multichoice">
+    <name>
+      <text>Forces expanding the international capital market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the forces
+that expanded the international market were</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 250 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The evolution of information technology like electronic trading,
+deregulation of national capital markets and the development of
+innovative financial instruments</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The accelerated financial deepening in the developing countries,
+innovation in telecommunications and the introduction of
+international financial agreements around the world</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The development of financial instruments, as well as new financial
+technologies, markets and institutions in the world financial centers
+around the globe</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835009  -->
+  <question type="multichoice">
+    <name>
+      <text>Foreign exchange market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the foreign
+exchange market refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 254 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A market
+in which different currencies are bought and also
+sold where there exchange
+rates are determined</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A source of funding to raise
+the appropriate type of capital that best fits the
+needs of
+a multinational company</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A means by which individuals access the international market to buy
+products using other foreign currencies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835014  -->
+  <question type="multichoice">
+    <name>
+      <text>Forward contract</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild a forward
+exchange contract is
+define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 260 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A kind
+of derivative that requires the exchange of and agreed-on amount of a
+currency on a agreed-on date at a specified exchange rate</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A kind of swap where
+an agreement is established to exchange a currency between 2 parties,
+ employed to obtain loans at favorable interest rates</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A contract between 2 or more
+entities, which are legally linked, to exchange different
+currencies
+for a specific asset where this asset is usually gold</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835013  -->
+  <question type="multichoice">
+    <name>
+      <text>Forward exchanged rates</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify"><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild a forward
+exchange rate is
+define as</p></p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 259 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify"><p align="justify">
+The exchange rate at
+which two parties agree to exchange currencies on a specified future
+date</p></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The
+exchange rate that is stable and linked
+to another currency or asset to derive its value</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The
+exchange rate where its fluctuation is maintained by the central bank
+within a certain range</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835010  -->
+  <question type="multichoice">
+    <name>
+      <text>Functions of the foreign exchange market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild some
+of the functions
+of the foreign exchange
+market are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 254 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+To
+convert one currency into another and
+insure against potential
+losses due to variability of
+exchange rates</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">To </span><span lang="en-US">allocate
+in an efficient way the products around the globe and determine its
+prices in different currencies</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">To allow
+borrowers and lenders access different currencies and establish the
+</span><span lang="en-US">fair</span><span lang="en-US">
+level </span><span lang="en-US">of
+</span><span lang="en-US">exchange
+rates</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835016  -->
+  <question type="multichoice">
+    <name>
+      <text>Interbank foreign exchange market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild the Interbank
+foreign exchange market is</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 262 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A </span><span lang="en-US">market
+where world’s largest banks exchange currencies at a spot and
+forward rates around the globe </span>
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A market where central banks buy currencies under the supervision of
+the International Monetary Fund</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A market where multinationals obtain significant quantities of
+currencies to trade in domestic economies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835007  -->
+  <question type="multichoice">
+    <name>
+      <text>International capital market components</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the
+components of the international capital market are</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 252 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The market of domestic currencies that are banked outside the
+countries of origin, the market of stocks bought and sold outside the
+domestic territory issuer and the market of bonds sold by issuing
+organizations out side their own countries</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The forex market where
+participants exchange and
+speculate on currencies, the
+international derivatives market where futures and contracts are
+trade and the international monetary system regulated by the
+International Monetary Fund</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+The international trade of products
+controlled by the World Customs Organization, the
+real estate international market in which land and buildings are
+trade around the world and the international currency market where
+currencies are sell  
+</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835004  -->
+  <question type="multichoice">
+    <name>
+      <text>Purposes of the international capital market</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild the purposes
+of the international capital market are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 249 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+To expand the money supply, reduce the cost for borrowers and
+mitigate the risk for lenders by spreading their investments on a
+diversify number of debt and equity instruments 
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+To promote economic efficiency in
+the international markets by allowing  individuals to invest in
+physical capital goods, which will be used to help increase their
+income in the long term</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+To help countries to
+effectively reduce the gap between household savings and productive
+investment opportunities in the real economy by allocating debt and
+equity in an efficient way</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835011  -->
+  <question type="multichoice">
+    <name>
+      <text>Quoted currency and base currency</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild if the
+exchange rate between Colombian peso (COP) and USA Dollar (USD) is
+expressed as COP / USD then</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 256 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The Colombian peso (COP) is the quoted currency and the USA Dollar
+(USD) is the base currency</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The Colombian peso (COP) is the
+indirect
+rate quote and the USA
+Dollar (USD) is the direct
+rate quote</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The Colombian peso (COP) is the
+currency
+denominator and
+the USA Dollar (USD) is the currency
+numerator</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835012  -->
+  <question type="multichoice">
+    <name>
+      <text>Spot rates</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild a spot rate
+is define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p>Checkout Chapter 9 page 259 in the book International Business: The
+Challenges of Globalization (2020)<br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify"><p align="justify">
+The exchange rate requiring delivery of the traded currency within
+two working days</p><br></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The exchange rate defined in an
+agreement to purchase or
+sell a currency at a future
+date</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The exchange rate determined
+by the market forces without
+any government intervention</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835015  -->
+  <question type="multichoice">
+    <name>
+      <text>Vehicle currency</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International
+Business: The Challenges of Globalization (2020) by Wild, John J, and
+Kenneth L Wild a vehicle
+currency is
+define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 261 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A currency
+used as an intermediary to convert funds between two other currencies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A currency </span>that
+is accepted for trade <span lang="en-US">and
+is used as a </span><span lang="en-US">global
+medium of exchange</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+currency </span><span lang="en-US">that
+is held in significant quantities by central banks or other
+authorities</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835006  -->
+  <question type="multichoice">
+    <name>
+      <text>World financial centers</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book International Business: The Challenges of
+Globalization (2020) by Wild, John J, and Kenneth L Wild an offshore
+financial center is a</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 9 page 251 in the book International Business: The
+Challenges of Globalization (2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A territory whose financial sector is characterized by few
+regulations and low taxation which can by categorized as operational
+or booking centers</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A jurisdiction that provides financial services to nonresidents in a
+domestic economy with low regulation but with a high level taxation
+for financial instruments</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A country where multinational corporations find attractive for
+establishing subsidiaries because <span lang="en-US">there is a deep
+</span><span lang="en-US">and adequate </span><span lang="en-US">development
+of the financial </span><span lang="en-US">local </span><span lang="en-US">market</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 10 International Monetary System</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3835139  -->
+  <question type="multichoice">
+    <name>
+      <text>Devaluation and revaluation</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild if
+the exchange rate between Colombian peso (COP) and USA Dollar (USD)
+is expressed as COP / USD then</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 10
+page 272
+in the book International Business: The Challenges of Globalization
+(2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+If
+the exchange rate increases then the Colombian peso (COP) devalues
+with respect to the 
+USA Dollar (USD)</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+If the exchange rate increases
+then the Colombian peso (COP) revaluates with respect to the  USA
+Dollar (USD)</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">If
+the exchange rate </span><span lang="en-US">decreases</span><span lang="en-US">
+then the Colombian peso (COP) </span><span lang="en-US">devalues</span><span lang="en-US">
+with respect to the  USA Dollar (USD)</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835141  -->
+  <question type="multichoice">
+    <name>
+      <text>Fundamental analysis</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+fundamental analysis in the context of forecasting exchange rates
+refers to</p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US"></span><span lang="en-US"><p align="justify">
+Checkout Chapter 10
+page 274
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></span></p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+</span><span lang="en-US">technique
+that uses statistical models based on fundamental economic indicators
+to forecast</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+technique that </span><span lang="en-US">usually
+</span><span lang="en-US">uses
+charts of past trends in currency prices an other factors to forecast</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+technique that uses the seasonal </span><span lang="en-US">and
+cyclical </span><span lang="en-US">movements
+of financial instruments </span><span lang="en-US">to
+forecast</span><span lang="en-US">
+</span>
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835161  -->
+  <question type="multichoice">
+    <name>
+      <text>International monetary system</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book
+International Business: The Challenges of Globalization (2020) by
+Wild, John J, and Kenneth L Wild is the international monetary system
+is</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 10 page 280 in
+the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+</span><span lang="en-US">collection
+of agreements and institutions that govern exchange rates around the
+globe</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A systems in which nations link
+the value of their paper currencies to specific values of gold</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A mechanism in which the
+exchange rate for converting one currency into another is fixed</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835162  -->
+  <question type="multichoice">
+    <name>
+      <text>Managed float system</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book
+International Business: The Challenges of Globalization (2020) by
+Wild, John J, and Kenneth L Wild a managed float system is</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 10 page 284 in
+the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+e</span><span lang="en-US">xchange
+rate system in which currencies float </span><span lang="en-US">against
+one another, which governments intervening to stabilize their
+currencies at a particular target</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+e</span><span lang="en-US">xchange
+rate system </span><span lang="en-US">in
+which currencies float freely against one another, without
+governments intervening in the currency markets</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+ e</span><span lang="en-US">xchange
+rate system </span><span lang="en-US">based
+on an explicit commitment to exchange domestic currency for a
+specified foreign currency at a fixed exchange rate</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835140  -->
+  <question type="multichoice">
+    <name>
+      <text>Market efficient view</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+market efficient view in the context of exchange rates refers to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 10
+page 273
+in the book International Business: The Challenges of Globalization
+(2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">A
+</span><span lang="en-US">theory
+that states that prices of financial instruments reflect all publicly
+available information at any given time which means that forward
+exchange rates are accurate forecasts of future exchange rates</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">A
+theory that states that prices of financial instruments are
+</span><span lang="en-US">influenced
+by past events </span><span lang="en-US">at
+any given time which means that lag spot exchange rates are accurate
+forecasts of future exchange rates </span>
+</p><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+<span lang="en-US">A
+theory that states that prices of financial instruments are not
+influenced by future or past events at any given time which means
+that </span><span lang="en-US">real</span><span lang="en-US">
+exchange rates are essentially random walks</span></p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835147  -->
+  <question type="multichoice">
+    <name>
+      <text>The Fisher effect</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+Fisher
+effect
+refers
+to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 10
+page 278
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+principle </span><span lang="en-US">that
+</span><span lang="en-US">relates
+inflation to interest rates where it is pointed out that nominal
+interest rate is the sum of the real interest rate and the expected
+rate of inflation over a specific period</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A law where it is pointed out
+that the inflation rate that is equal to the price of the basket of
+goods at one location divided by the price of the basket of goods at
+a different location</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+postulate where it establishes that </span><span lang="en-US">a
+country should specialize in producing and exporting only those goods
+and services which it can produce more efficiently </span><span lang="en-US">at
+a lower opportunity cost</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835160  -->
+  <question type="multichoice">
+    <name>
+      <text>The international Fisher effect</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+international
+Fisher
+effect
+refers
+to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 10 page 279 in
+the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+principle </span><span lang="en-US">which</span><span lang="en-US">
+</span><span lang="en-US">establishes
+</span><span lang="en-US">that
+a difference in nominal interests rates supported by t</span><span lang="en-US">w</span><span lang="en-US">o
+countries’ currencies will cause an equal but opposite change in
+their spot exchange rates</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+law where it is pointed out that the inflation rate </span><span lang="en-US">of
+a domestic economy tend</span><span lang="en-US">s</span><span lang="en-US">
+to converge to the level of exchange rate of the mayor international
+trade partner </span><span lang="en-US">of
+this economy</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">A
+postulate </span><span lang="en-US">that</span><span lang="en-US">
+it establishes that </span><span lang="en-US">a
+country should </span><span lang="en-US">maintain
+a fixed exchange rate system </span><span lang="en-US">through</span><span lang="en-US">
+the gold standard to control a persistent increasing in prices of a
+domestic economy</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3835145  -->
+  <question type="multichoice">
+    <name>
+      <text>The law of one price</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p></p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+law
+of one price refers
+to</p><br><p></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p></p><p align="justify">
+Checkout Chapter 10
+page 275
+in the book International Business: The Challenges of Globalization
+(2020)</p><br><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p align="justify">
+A principle that establishes
+that an identical product must have an identical price in all
+countries when the price is expressed in a common currency</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+A theory that postulates that
+exchange rates around the world tend to converge to a specific value
+based on the fundamentals of the global economy</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p></p><p align="justify">
+An empirical regularity
+identified in relation to the prices of goods and services trade
+around the world where they tend to be equal to the real exchange
+rates</p><br><p></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 13 Selecting and Managing Entry Modes</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3880091  -->
+  <question type="multichoice">
+    <name>
+      <text>Degree of export involvement</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild the
+possible degrees of export involvement for a company include</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 344
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Direct
+exporting through a sales
+representative or a distributor and indirect exporting
+through agents, export
+management companies or
+export trading companies</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Countertrade
+by selling products that are paid with other products and switch
+trading by selling to another company its obligation to make a
+purchase in a given country</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Buyback
+by exporting industrial equipment in return for products produced by
+that equipment and offset by making a hard-currency purchase of a
+unspecified product from a country in the future 
+</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880088  -->
+  <question type="multichoice">
+    <name>
+      <text>Developing an export strategy</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild to
+develop a export strategy a company should</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 343
+in the book International Business: The Challenges of Globalization
+(2020)
+
+</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Identify
+a potential market, determine
+if it is capable to satisfy the needs of the market,
+initiate meetings with
+potential local distributors
+and commit human,
+financial and physical resources</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Locate
+a stable country, identify restrictions
+on international trade like
+tariffs, import quotas an licenses and understand the rivals in the
+foreign market
+using competitive intelligence tools</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Explore
+possible trade agreements in force, make
+a market research to collect information in order to use it in the
+decision-making process and allocate resources to establish contacts
+in the foreign market</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880085  -->
+  <question type="multichoice">
+    <name>
+      <text>Entry mode</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According to the book
+International Business: The Challenges of Globalization (2020) by
+Wild, John J, and Kenneth L Wild an entry mode is define as</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 13 page 342 in
+the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p>
+An institutional arrangement by which a company gets its products,
+technologies, human skills or other resources into a market</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A set of strategies adopted by multinationals for organizing and
+conducting international business transactions such as contractual
+transfers</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The best way to enter a new market for a born global company such as
+contractual transfers, joint ventures and wholly owned operations</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880095  -->
+  <question type="multichoice">
+    <name>
+      <text>Export/import financing</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild some
+methods of export/import financing are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 347
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+An advanced payment where an
+importer pays an exporter for merchandise before it is shipped and an
+open account where an exporter ships merchandise and later bills the
+importer for its value</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A letter of credit where a bank
+act as an intermediary by accepting all the financial risk and
+documentary collection where the importer’s bank issues a document
+to pay the exporter</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+bill of lading where the importer pay the exporter a specified sum of
+money at a specified time and a bill of exchange where a contract
+between the exporter and the shipper is established</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880104  -->
+  <question type="multichoice">
+    <name>
+      <text>Key strategic factors in selecting an entry mode</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+some
+key strategic factors in selecting an entry mode are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 359
+in the book International Business: The Challenges of Globalization
+(2020) 
+</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Political
+instability can cause companies to favor entry modes that limit
+investments and companies tend to first go abroad by exporting and to
+later select entry modes that require deeper involvement</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Managers
+that are less confident in their abilities in unfamiliar cultures
+must embrace investment entry modes
+and avoid at all cost exporting and contractual modes that implies a
+greater risk</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Producing
+at home is desirable when production costs in a foreign market are
+high compared to a domestic economy and when shipping costs are low
+where an investment entry mode is advisable</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880097  -->
+  <question type="multichoice">
+    <name>
+      <text>Licensing</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+the contractual entry mode known as licensing refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 351
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p><p></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice by which one
+company owning intangible property grants another company the right
+to use that property for a specified period of time</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice by which companies use licensing agreements to exchange
+intangible property with one another usually for a complete business
+year</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice by which one company supplies another company with
+intangible property and other assistance over an extended period of
+time</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880100  -->
+  <question type="multichoice">
+    <name>
+      <text>Management contracts</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+the contractual entry mode known as management
+contract
+refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 13
+page 354
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice by which one company supplies another company with
+managerial expertise for a specific period of time</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice by which one company designs, constructs and tests a
+production facility for a client in another company</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+practice where a company is created and jointly owned by two or more
+independent entities to achieve a common objective</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880087  -->
+  <question type="multichoice">
+    <name>
+      <text>Why companies exports?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild companies
+exports to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout Chapter 13 page 342 in
+the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Expand
+total sales, diversify sales and gain international business
+experience</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Sell the excess production and
+fix higher prices to consumers in other countries</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Increase the competitiveness in
+all markets and smooth the business cycles</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/Electiva I: Globalización Económica AE A [B-1]/International Business: The Challenges of Globalization (2020) by Wild, John J, and Kenneth L Wild /Chapter 15 Managing International Operations</text>
+    </category>
+    <info format="html">
+      <text></text>
+    </info>
+  </question>
+
+<!-- question: 3880106  -->
+  <question type="multichoice">
+    <name>
+      <text>Capacity planning</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+the
+process of capacity planning refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 15
+page 388
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Assessing
+a company’s ability to produce enough output to satisfy market
+demand</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Selecting
+the location for production facilities <span lang="en-US">to
+benefit</span><span lang="en-US">
+from location economies</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+<span lang="en-US">Acquiring
+the inputs to design new products necessary for a differentiation
+strategy</span></p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880136  -->
+  <question type="multichoice">
+    <name>
+      <text>Potential ways to finance business operations</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+some possible ways to
+finance business operations of a company are</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 15
+page 397
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Revenue
+from ongoing operations of the company to help its expansion and
+financing obtained from investors who believe that the company will
+experience rapid growth and where they expect to receive equity in
+return</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Back-to-back
+loans where and external international
+investor deposits money
+in a host-country bank which then lends this money to the company and
+issuing equity to access pools of investors with external funds</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+External
+funding through a swapping of debt or equity, charging royalties,
+licensing fees and
+issuing depository receipts certificates that are trade in the
+domestic financial market and that represent a number of shares</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880107  -->
+  <question type="multichoice">
+    <name>
+      <text>Process planning</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+the
+process planning refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 15
+page 390
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+Deciding the process that a
+company will use to create its own production</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Deciding the spatial
+arrangement of production within production facilities</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+Deciding whether production
+process will by standardized or adapted for markets</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880135  -->
+  <question type="multichoice">
+    <name>
+      <text>Total quality management</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+the
+Total Quality Management refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 15
+page 395
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+A company wide commitment to
+meet or exceed customer expectations through continuous quality
+improvement efforts and processes</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+An
+international certification that companies get when they meet the
+highest possible quality standards in their respective industries</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+A
+production technique in which inventory is kept to a minimum and
+inputs to the production process arrive when they are needed</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 3880129  -->
+  <question type="multichoice">
+    <name>
+      <text>Vertical integration</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p><p align="justify">
+According
+to the book International Business: The Challenges of Globalization
+(2020) by Wild, John J, and Kenneth L Wild
+vertical
+integration
+refers to</p><br></p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text><![CDATA[<p><p align="justify">
+Checkout
+Chapter 15
+page 392
+in the book International Business: The Challenges of Globalization
+(2020)</p><br></p>]]></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p><p align="justify">
+The process by which a company
+extends its control over additional stages of production, either
+inputs or outputs</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The process by which a company
+decides whether to make a specific component or to buy it from
+another company</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p><p align="justify">
+The process by which a company
+buys from another company a product that is part of a company’s
+value-added activities</p><br></p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

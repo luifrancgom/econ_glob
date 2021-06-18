@@ -1,7 +1,7 @@
 ---
 title: "Selecting and managing entry modes"
 author: "Luis Francisco Gomez Lopez"
-date: 2020-09-01
+date: 2021-02-26 18:37:02 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -70,7 +70,7 @@ library(kableExtra)
 
 - The purpose of the virtual meetings is to answer questions and not to make a summary of the study material.
 
-- This presentation is based on [@wildInternationalBusinessChallenges2020, Chapter 13]
+- This presentation is based on [@wild_international_2020, Chapter 13]
 
 # Purpose
 
@@ -226,7 +226,7 @@ col_2019_exports_clean <- col_2019_exports %>%
     # Areas excluded: "World", "Other Asia, nes", "Free Zones", "Areas, nes"
     filter(!(partner %in% c("World", "Other Asia, nes", "Free Zones", "Areas, nes", "Br. Indian Ocean Terr."))) %>%
     # Adding continent
-    left_join(codelist %>%
+    left_join(countrycode::codelist %>%
                   select(continent, country.name.en, iso3c), by = c("partner_iso" = "iso3c")) %>%
     select(year, trade_flow, reporter, partner_iso, partner, trade_value_usd, continent) %>%
     mutate(label_text = str_glue("{partner}
@@ -250,7 +250,7 @@ col_2019_exports_clean %>%
                              and other Asia areas not elsewhere specified,
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2020-09-01")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -350,7 +350,7 @@ col_2019_imports_clean %>%
                              other Asia areas not elsewhere specified and French Southern and Antarctic Lands
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2020-09-01")) +
+                              Last update: 2021-02-26")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -408,7 +408,7 @@ import_col_comp_2019 %>%
 
 # Franchising in Colombia
 
-- Not explicit regulated by any local law or Andean regulation [@reyesPrimerFranchisingColombia2016]
+- Not explicit regulated by any local law or Andean regulation [@reyes_primer_2016]
 
     + Colombian Civil Code, Article 1602: franchisor and franchisee are free to perform a franchising relationship
     + Franchisor should register her trademarks, logos and slogans in agreement with the Andean Decision 486 of 2000[^3]
@@ -438,6 +438,8 @@ import_col_comp_2019 %>%
     
         + 800 jobs in the course of its construction
         + 220 direct and 250 indirect jobs when it becomes fully operational
+        
+[^4]: [@rowland_ecocementos_2017]
         
 # Turnkey project and Joint venture: cement plant Río Claro (Sonsón, Colombia) case study
 

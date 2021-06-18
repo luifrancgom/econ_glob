@@ -1,7 +1,7 @@
 ---
 title: "Political economy and ethics"
 author: "Luis Francisco Gomez Lopez"
-date: 2020-09-14
+date: 2021-03-12 11:41:08 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -194,7 +194,7 @@ digraph boxes_and_circles {
 
 # Economic macroenvironment
 
-```{r, out.width="100%"}
+```{r, out.width="60%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -292,7 +292,7 @@ digraph boxes_and_circles {
 ```{r, out.width="80%"}
 
 # Data
-tax_complex_ind_2016 <- read_excel(path      = "009_tax_complexity_2020-09-14.xlsx", 
+tax_complex_ind_2016 <- read_excel(path      = "009_tax_complexity_2021-03-12.xlsx", 
            sheet     = 2, 
            range     = "A1:C101", 
            col_names = TRUE) %>% 
@@ -312,14 +312,16 @@ tax_complex_ind_2016 %>%
        y        = "Tax complexity index",
        fill    = "",
        title    = "Tax complexity index by country",
+       # In the case of tax_complex_ind_2016$country[2] 
+       ## search for Colombia
        subtitle = str_glue("Year: 2016
                            Index interpretation: values range between zero (not complex) and one (extremely complex)
                            Number of countries: {nrow(tax_complex_ind_2016)}
                            Red color: {tax_complex_ind_2016$country[2]} ({tax_complex_ind_2016$tax_complex_ind[2] %>% round(digits = 3)})
                            Maximum value: {tax_complex_ind_2016$country[1]} ({tax_complex_ind_2016$tax_complex_ind[1] %>% round(digits = 3)})
-                           Minimum value: {tax_complex_ind_2016$country[100]} ({tax_complex_ind_2016$tax_complex_ind[100] %>% round(digits = 3)})"),
-       caption  = str_glue("Data source: www.taxcomplexity.org,
-                            Last update: 2020-09-14")) +
+                           Minimum value: {tax_complex_ind_2016$country[length(tax_complex_ind_2016$country)]} ({tax_complex_ind_2016$tax_complex_ind[length(tax_complex_ind_2016$country)] %>% round(digits = 3)})"),
+       caption  = str_glue("Data source: www.taxcomplexity.org
+                            Last update: 2021-03-12")) +
   scale_y_continuous(limits = c(0,1)) + 
   scale_fill_tq() +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
@@ -340,19 +342,24 @@ tax_complex_ind_2016 %>%
 ```{r, out.width="80%"}
 
 # Data
-tax_attract_ind_2016 <- read_excel(path      = "009_tax_index_custom.xlsx", 
+year_chosen <- 2018
+
+tax_attract_ind <- read_excel(path      = "009_tax_index_custom_2021-03-21.xlsx", 
            sheet     = 1, 
-           range     = "A3:E1203", 
-           col_names = TRUE) %>% 
+           range     = "A3:Z1203", 
+           col_names = TRUE, 
+           na        = c("", "-")) %>% 
   select(Country, Year, `Tax Attractiveness Index (20 Components)`) %>% 
   set_names(nm = c("country", "year", "tax_attract_ind")) %>% 
-  filter(year == 2016) %>%
   drop_na() %>% 
-  arrange(desc(tax_attract_ind))
+  arrange(desc(tax_attract_ind)) %>% 
+  filter(year == year_chosen)
 
+tax_attract_ind_col <- tax_attract_ind %>% 
+  filter(year == year_chosen, country == "Colombia")
 
 # Plot
-tax_attract_ind_2016 %>% 
+tax_attract_ind %>% 
   ggplot() + 
   geom_col(aes(x       = fct_reorder(.f = country, .x = tax_attract_ind), 
                y       = tax_attract_ind,
@@ -364,14 +371,14 @@ tax_attract_ind_2016 %>%
        y        = "Tax attractiveness index",
        fill    = "",
        title    = "Attractiveness of the tax environment for corporations by country",
-       subtitle = str_glue("Year: 2016
+       subtitle = str_glue("Year: {year_chosen}
                            Index interpretation: values range between zero (not attractive) and one (extremely attractive)
-                           Number of countries: {nrow(tax_attract_ind_2016)}
-                           Red color: {tax_attract_ind_2016$country[87]} ({tax_attract_ind_2016$tax_attract_ind[87] %>% round(digits = 3)})
-                           Maximum value: {tax_attract_ind_2016$country[1]} ({tax_attract_ind_2016$tax_attract_ind[1] %>% round(digits = 3)})
-                           Minimum value: {tax_attract_ind_2016$country[99]} ({tax_attract_ind_2016$tax_attract_ind[99] %>% round(digits = 3)})"),
+                           Number of countries: {nrow(tax_attract_ind)}
+                           Red color: {tax_attract_ind_col$country} ({tax_attract_ind_col$tax_attract_ind %>% round(digits = 3)})
+                           Maximum value: {tax_attract_ind$country[1]} ({tax_attract_ind$tax_attract_ind[1] %>% round(digits = 3)})
+                           Minimum value: {tax_attract_ind$country[length(tax_attract_ind$country)]} ({tax_attract_ind$tax_attract_ind[length(tax_attract_ind$country)] %>% round(digits = 3)})"),
        caption  = str_glue("Data source: https://www.tax-index.org/
-                            Last update: 2020-09-14")) +
+                            Last update: 2121-03-12")) +
   scale_y_continuous(limits = c(0,1)) + 
   scale_fill_tq() +
   theme(panel.border      = element_rect(fill = NA, color = "black"),

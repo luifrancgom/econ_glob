@@ -1,7 +1,7 @@
 ---
 title: "Managing international operations"
 author: "Luis Francisco Gomez Lopez"
-date: 2020-09-07
+date: 2021-03-12 09:57:35 GMT -05:00
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -69,7 +69,7 @@ Understand the elements to consider when formulating production strategies and t
 
 # Production strategy
 
-```{r, out.width="100%"}
+```{r, out.width="60%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -127,7 +127,7 @@ digraph boxes_and_circles {
 
 # Acquiring physical resources
 
-```{r, out.width="100%"}
+```{r, out.width="70%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -191,7 +191,7 @@ digraph boxes_and_circles {
 
 # Key production concerns
 
-```{r, out.width="100%"}
+```{r, out.width="80%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -251,7 +251,7 @@ digraph boxes_and_circles {
 
 # Financing business operations
 
-```{r, out.width="100%"}
+```{r, out.width="60%"}
 
 grViz("
 digraph boxes_and_circles {
