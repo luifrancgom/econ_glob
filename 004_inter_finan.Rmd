@@ -1,7 +1,7 @@
 ---
 title: "International financial markets"
 author: Luis Francisco Gomez Lopez
-date: 2021-02-11 15:23:33 GMT -05:00
+date: 2022-02-12 17:36:02
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -114,7 +114,7 @@ read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2021-02-11"))
+                      "Lat update: 2022-12-02"))
 ```
 
 # Exchange regime in Colombia
@@ -131,7 +131,7 @@ read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2021-02-11"))
+                      "Lat update: 2022-02-12"))
 ```
 
 # Exchange rates
@@ -169,7 +169,7 @@ cop_usd %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_usd$symbol)}
                              Highest price of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2021-02-11")) +
+                             Last update date: 2022-02-12")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -198,7 +198,7 @@ cop_eur %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_eur$symbol)}
                              Highest prices of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2021-02-11")) +
+                             Last update date: 2022-02-12")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -227,7 +227,7 @@ cop_gbp %>%
          subtitle = str_glue("Variable code Yahoo Finance: {unique(cop_gbp$symbol)}
                              Highest prices of each day used to make the plot: {names(cop_usd)[[3]]} column in Yahoo Finance"),
          caption  = str_glue("Source: Yahoo Finance
-                             Last update date: 2021-02-11")) +
+                             Last update date: 2022-02-12")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),

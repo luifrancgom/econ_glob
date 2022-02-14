@@ -1,7 +1,7 @@
 ---
 title: "Political economy and ethics"
 author: "Luis Francisco Gomez Lopez"
-date: 2021-03-12 11:41:08 GMT -05:00
+date: 2022-02-14 09:01:21
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -287,20 +287,23 @@ digraph boxes_and_circles {
 
 # Legal macroenvironment
 
-- Tax complexity [@hoppe_measuring_2019]
+- Tax complexity [@hoppe_tax_2021]
 
 ```{r, out.width="80%"}
 
 # Data
-tax_complex_ind_2016 <- read_excel(path      = "009_tax_complexity_2021-03-12.xlsx", 
-           sheet     = 2, 
-           range     = "A1:C101", 
-           col_names = TRUE) %>% 
+# Data
+tax_complex_ind_2020 <- read_excel(path      = "009_tax_complexity_2022-02-14.xlsx", 
+                                   sheet     = 2, 
+                                   range     = "A1:C228", 
+                                   col_names = TRUE) %>% 
   set_names(nm = c("country", "year", "tax_complex_ind")) %>% 
+  filter(year == 2020) %>% 
   arrange(desc(tax_complex_ind))
 
+
 # Plot
-tax_complex_ind_2016 %>% 
+tax_complex_ind_2020 %>% 
   ggplot() + 
   geom_col(aes(x       = fct_reorder(.f = country, .x = tax_complex_ind), 
                y       = tax_complex_ind,
@@ -314,14 +317,14 @@ tax_complex_ind_2016 %>%
        title    = "Tax complexity index by country",
        # In the case of tax_complex_ind_2016$country[2] 
        ## search for Colombia
-       subtitle = str_glue("Year: 2016
+       subtitle = str_glue("Year: 2020
                            Index interpretation: values range between zero (not complex) and one (extremely complex)
-                           Number of countries: {nrow(tax_complex_ind_2016)}
-                           Red color: {tax_complex_ind_2016$country[2]} ({tax_complex_ind_2016$tax_complex_ind[2] %>% round(digits = 3)})
-                           Maximum value: {tax_complex_ind_2016$country[1]} ({tax_complex_ind_2016$tax_complex_ind[1] %>% round(digits = 3)})
-                           Minimum value: {tax_complex_ind_2016$country[length(tax_complex_ind_2016$country)]} ({tax_complex_ind_2016$tax_complex_ind[length(tax_complex_ind_2016$country)] %>% round(digits = 3)})"),
+                           Number of countries: {nrow(tax_complex_ind_2020)}
+                           Red color: {tax_complex_ind_2020$country[3]} ({tax_complex_ind_2020$tax_complex_ind[3] %>% round(digits = 3)})
+                           Maximum value: {tax_complex_ind_2020$country[1]} ({tax_complex_ind_2020$tax_complex_ind[1] %>% round(digits = 3)})
+                           Minimum value: {tax_complex_ind_2020$country[length(tax_complex_ind_2020$country)]} ({tax_complex_ind_2020$tax_complex_ind[length(tax_complex_ind_2020$country)] %>% round(digits = 3)})"),
        caption  = str_glue("Data source: www.taxcomplexity.org
-                            Last update: 2021-03-12")) +
+                            Last update: 2022-02-14")) +
   scale_y_continuous(limits = c(0,1)) + 
   scale_fill_tq() +
   theme(panel.border      = element_rect(fill = NA, color = "black"),

@@ -1,7 +1,7 @@
 ---
 title: "Analyzing international opportunities"
 author: "Luis Francisco Gomez Lopez"
-date: 2021-02-26 18:57:41 GMT -05:00
+date: 2022-02-12 13:22:56
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -278,7 +278,7 @@ low_country_doing_business_score_2019 %>%
 
 - Main topics commonly included and possible variables
 
-```{r, out.width="100%"}
+```{r, out.width="75%"}
 
 grViz("
 digraph boxes_and_circles {

@@ -1,7 +1,7 @@
 ---
 title: "Global business environment"
 author: Luis Francisco Gomez Lopez
-date: 2021-01-27 20:45:21 GMT -05:00
+date: 2022-01-25 11:38:35
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -65,7 +65,7 @@ Introduce the students to the concept of globalization and explain how it affect
 ```{r, out.width="90%"}
 
                             # World   
-wbstats::wb_data(country   = "WLD",
+data_exports_imports <- wbstats::wb_data(country   = "WLD",
                  # Imports and exports of goods and services 
                  # (constant 2010 US$)
    indicator = c("NE.IMP.GNFS.KD", "NE.EXP.GNFS.KD"), 
@@ -75,9 +75,10 @@ wbstats::wb_data(country   = "WLD",
   mutate(indicator_id = case_when(
     indicator_id == "NE.IMP.GNFS.KD" ~ "Imports",
     indicator_id == "NE.EXP.GNFS.KD" ~ "Exports",
-    TRUE                             ~ indicator_id)) %>%
+    TRUE                             ~ indicator_id)) %>% 
+  drop_na()
   
-  #Plot
+data_exports_imports %>% 
   ggplot() +
   geom_point(aes(x = date, y = value, fill = indicator_id),
              shape = 21,
@@ -98,12 +99,13 @@ wbstats::wb_data(country   = "WLD",
   labs(x        = "Year",
        y        = "Billions (Long scale)",
        color    = "",
-       title    = "World imports and exports: 1970-2019",
+       title    = str_glue
+       ("World imports and exports: {min(data_exports_imports$date)}-{max(data_exports_imports$date)}"),
        subtitle = str_glue("Variables Units: constant USD Base Year 2010
                               Imports WDI code : NE.IMP.GNFS.KD
                               Exports WDI: NE.EXP.GNFS.KD"),
        caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-12-16")) +
+                              Last update: 2021-12-16")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),
@@ -121,11 +123,12 @@ wbstats::wb_data(country   = "WLD",
 ```{r, out.width="70%"}
 
 # Data
-read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue") %>%
+companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue") %>%
   html_table(fill = TRUE) %>%
-  .[[1]] %>%
+  .[[5]] %>%
   as_tibble() %>%
   select(2,4) %>%
+  slice(-1) %>% 
   set_names(nm = c("company_country", "revenue_gdp")) %>%
   mutate(revenue_gdp = str_remove(string = revenue_gdp, pattern = "\\$*"),
          revenue_gdp = str_remove(string = revenue_gdp, pattern = ","),
@@ -134,12 +137,13 @@ read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenu
   slice_max(order_by = revenue_gdp, n = 5) %>% 
   bind_rows(wb_data(country = c("COL", "SWE", "THA", "ZAF", "FIN"),
                     indicator = "NY.GDP.MKTP.CD",
-                    start_date = 2019,
-                    end_date = 2019) %>%
+                    start_date = 2020,
+                    end_date = 2020) %>%
               select(country, NY.GDP.MKTP.CD) %>%
               set_names(nm = c("company_country", "revenue_gdp")) %>%
-              mutate(type = "Country")) %>%
+              mutate(type = "Country"))
   # Plot
+  companies_countries %>% 
   ggplot() +
   geom_col(aes(x = revenue_gdp,
                y = fct_reorder(company_country, revenue_gdp),
@@ -151,13 +155,13 @@ read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenu
   labs(x        = "Revenue or GDP USD Billions (Short scale)",
        y        = "Country or Company",
        fill     = "",
-       title    = "Anual Revenue or GDP in year 2019",
+       title    = "Anual Revenue or GDP in year 2020",
        subtitle = str_glue("Variables Units: current USD
                               GDP WDI code : NY.GDP.MKTP.CD"),
        caption  = str_glue("Source 1: World Development Indicators - World Bank,
-                              Last update: 2020-12-16
+                              Last update: 2021-12-16
                               Source 2: Fortune 500 - Fortune magazine
-                              Last update: 2020-08-10")) +
+                              Last update: 2021-08")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),
@@ -300,7 +304,7 @@ read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenu
 
                      # Data set that contains KOF Globalization
                      # index version 2019
-kofdata::get_dataset(set_name = "ds_globidx.v2019") %>%
+kofdata_col_wld <- kofdata::get_dataset(set_name = "ds_globidx.v2019") %>%
   # Extract the information from Colombia
   .$ch.kof.globidx.v2019.gi.col %>%
   # Coerce time-series objects, ts, to tibble
@@ -310,8 +314,9 @@ kofdata::get_dataset(set_name = "ds_globidx.v2019") %>%
   bind_rows(get_dataset(set_name = "ds_globidx.v2019") %>%
               .$ch.kof.globidx.v2019.gi.wld  %>%
               timetk::tk_tbl() %>%
-              mutate(country = "World")) %>%
+              mutate(country = "World"))
   # Plot
+kofdata_col_wld %>% 
   ggplot() +
   geom_point(aes(x = index, y = value, fill = country),
              shape = 21,
@@ -326,11 +331,11 @@ kofdata::get_dataset(set_name = "ds_globidx.v2019") %>%
   labs(x        = "Year",
        y        = "KOF index",
        color    = "",
-       title    = "KOF Globalization Index for Colombia and the World: 1970-2018",
+       title    = str_glue("KOF Globalization Index for Colombia and the World: {min(kofdata_col_wld$date)}-{max(kofdata_col_wld$date)}"),
        subtitle = str_glue("Colombia KOF index code: ch.kof.globidx.v2019.gi.col
                            World KOF index code: ch.kof.globidx.v2019.gi.wld"),
        caption  = str_glue("Source: KOF Swiss Economic Institute,
-                           Last update: 2019")) +
+                           Last update: 2021")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),

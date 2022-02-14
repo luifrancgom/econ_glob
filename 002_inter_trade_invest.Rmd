@@ -1,7 +1,7 @@
 ---
 title: "International trade and investment"
 author: Luis Francisco Gomez Lopez
-date: 2021-01-28 17:57:27 GMT -05:00
+date: 2022-01-27 11:36:04
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -115,8 +115,8 @@ tbl_exports_imports <- wbstats::wb_data(indicator   = c("BX.GSR.GNFS.CD",
                                                         "BM.GSR.GNFS.CD",
                                                         "SP.POP.TOTL"), 
                                         return_wide = TRUE,
-                                        start_date  = 2019, 
-                                        end_date    = 2019) %>%
+                                        start_date  = 2020, 
+                                        end_date    = 2020) %>%
   filter(across(BM.GSR.GNFS.CD:SP.POP.TOTL, .fns = ~ !is.na(.))) %>% 
   # Transform data
   select(country:SP.POP.TOTL) %>%
@@ -148,7 +148,7 @@ tbl_exports_imports %>%
        subtitle = str_glue("Variables Units: current USD Billions (Long scale)
                            Exports WDI code : BX.GSR.GNFS.CD"),
        caption  = str_glue("Source: World Development Indicators - World Bank,
-                           Last update: 2020-12-16")) +
+                           Last update: 2021-12-16")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),
@@ -183,7 +183,7 @@ tbl_exports_imports %>%
          subtitle = str_glue("Variables Units: current USD Billions (Long scale)
                               Imports WDI code : BM.GSR.GNFS.CD"),
          caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2020-12-16")) +
+                              Last update: 2021-12-16")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -247,7 +247,7 @@ tbl_exports_imports %>%
                fill = palette_light()[[2]],
                hjust = -0.5) +
     geom_segment(aes(xend = 0, yend = country)) +
-    xlim(0, 25e4) +
+    xlim(0, 27e4) +
     labs(x        = "",
          y        = "",
          title    = str_glue("Top 10 per-capita importers in year {unique(tbl_exports_imports$date)}"),
@@ -287,25 +287,25 @@ tbl_exports_imports %>%
     
 # Patterns of international trade 
 
-- Colombian exports __HS 4 digits__ year 1997 [@oec_observatory_2020]
+- Colombian exports __HS 4 digits (HS92) edition__ year 1997 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_col_exports_1997_hs6_92.png")
+include_graphics(path = "002_col_exports_1997_hs4_92.png")
 ```
     
 # Patterns of international trade 
 
-- Colombian exports __HS 4 digits__ year 2018 [@oec_observatory_2020]
+- Colombian exports __HS 4 digits (HS92) edition__ year 2019 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_col_exports_2008_hs6_92.png")
+include_graphics(path = "002_col_exports_2019_hs4_92.png")
 ```
 
 # Patterns of international trade 
 
-- Coffee exporters __HS 4 digits (0901)__ year 1997 [@oec_observatory_2020]
+- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 1997 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
@@ -314,11 +314,11 @@ include_graphics(path = "002_coffee_exports_1997_hs4_92.png")
 
 # Patterns of international trade 
 
-- Coffee exporters __HS 4 digits (0901)__ year 2018 [@oec_observatory_2020]
+- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 2019 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_coffee_exports_2018_hs4_92.png")
+include_graphics(path = "002_coffee_exports_2019_hs4_92.png")
 ```
 
 # Benefits of international trade

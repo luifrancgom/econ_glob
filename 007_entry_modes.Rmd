@@ -1,7 +1,7 @@
 ---
 title: "Selecting and managing entry modes"
 author: "Luis Francisco Gomez Lopez"
-date: 2021-02-26 18:37:02 GMT -05:00
+date: 2022-02-13 13:33:30
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -205,17 +205,17 @@ digraph boxes_and_circles {
 ```{r, out.width="90%"}
 
 # Data
-col_2019_exports <- ct_search(reporters = "Colombia",
+col_2020_exports <- ct_search(reporters = "Colombia",
           partners = "All",
           trade_direction = "exports",
           freq = "annual",
-          start_date = 2019,
-          end_date = 2019,
+          start_date = 2020,
+          end_date = 2020,
           commod_codes = "TOTAL",
           type = "goods")
 
 # Data clean
-col_2019_exports_clean <- col_2019_exports %>%
+col_2020_exports_clean <- col_2020_exports %>%
     as_tibble() %>%
     select(year, trade_flow,
            reporter_iso, reporter,
@@ -233,7 +233,7 @@ col_2019_exports_clean <- col_2019_exports %>%
                                  {(trade_value_usd / sum(trade_value_usd)) %>% scales::percent(accuracy = 0.01)}"))
 
 # Plot
-col_2019_exports_clean %>%
+col_2020_exports_clean %>%
     ggplot(aes(area  = trade_value_usd,
                label = label_text,
                subgroup = continent)) +
@@ -245,12 +245,12 @@ col_2019_exports_clean %>%
     labs(x        = "",
          y        = "",
          fill     = "",
-         title    = "Colombia goods exports by destination as percent of total exports: year 2019",
+         title    = "Colombia goods exports by destination as percent of total exports: year 2020",
          subtitle = str_glue("Territories excluded: Free zones, British Indian Ocean Territory, Areas not elsewhere specified
                              and other Asia areas not elsewhere specified,
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2021-02-26")) +
+                              Last update: 2022-02-13")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -266,22 +266,21 @@ col_2019_exports_clean %>%
 ```{r}
 
 # Files
-csv_files <- dir_ls(path = "007_export_col_monthly/", regexp = "[.]csv$")
+csv_files <- dir_ls(path = "007_export_col_monthly", regexp = "[.]csv$") 
 
 # Data
-export_col_comp_2019 <- csv_files %>%
+export_col_comp_2021 <- csv_files %>%
   map_dfr(.f = read_csv, col_types = cols(POSAR = col_character(),
                                           NIT   = col_character(),
                                           FECH  = col_character())) %>%
-  select(FECH, FOBDOL, FOBPES, NIT, RAZ_SIAL)
+  select(FECH, FOBDOL, NIT, RAZ_SIAL) 
 
 # Unique names export
-unique_name_export <- export_col_comp_2019 %>%
+unique_name_export <- export_col_comp_2021 %>%
   select(NIT, RAZ_SIAL) %>%
   distinct(NIT, .keep_all = TRUE)
 
-# Table
-export_col_comp_2019 %>%
+export_col_comp_2021 %>%
   group_by(NIT) %>%
   summarise(export_fob_us = sum(FOBDOL)) %>%
   ungroup() %>%
@@ -292,12 +291,12 @@ export_col_comp_2019 %>%
   slice(1:10) %>%
   mutate(`Exports (US dollars)` = scales::dollar(`Exports (US dollars)`),
          NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
-  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to exports (FOB) in 2019") %>%
+  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to exports (FOB) in 2021") %>%
   kable_styling(font_size = 6, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE)
 ```
 
-[^1]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de exportaciones > Estadísticas de Exportaciones - EXPO - 2011 A 2020 > Expo_2019
+[^1]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de exportaciones > Estadísticas de Exportaciones - EXPO - 2011 A 2021 > Expo_2021
 
 # Importing goods in Colombia
 
@@ -350,7 +349,7 @@ col_2019_imports_clean %>%
                              other Asia areas not elsewhere specified and French Southern and Antarctic Lands
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2021-02-26")) +
+                              Last update: 2022-02-13")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -366,45 +365,47 @@ col_2019_imports_clean %>%
 ```{r}
 
 # Files
-csv_files <- dir_ls(path = "007_import_col_monthly/", regexp = "[.]csv$")
+csv_files <- dir_ls(path = "007_import_col_monthly/Impo_2021/", regexp = "[.]csv$")
 
 # Data
-import_col_comp_2019 <- csv_files %>%
-    map_dfr(.f = read_csv2, col_types = cols(NABAN  = col_character(),
-                                            NIT     = col_character(),
-                                            FECH    = col_character(),
-                                            PAISGEN = col_character(),
-                                            PAISPRO = col_character(),
-                                            PAISCOM = col_character(),
-                                            BANDERA = col_character(),
-                                            COPAEX  = col_character(),
-                                            ACUERDO = col_character()),
-            locale = locale(decimal_mark = ",")) %>%
-    select(FECH, VACID, VACIP, NIT, RZIMPO)
+import_col_comp_2021 <- csv_files %>%
+  map_dfr(.f = read_csv, col_types = cols(NABAN   = col_character(),
+                                          NIT     = col_character(),
+                                          FECH    = col_character(),
+                                          PAISGEN = col_character(),
+                                          PAISPRO = col_character(),
+                                          PAISCOM = col_character(),
+                                          BANDERA = col_character(),
+                                          COPAEX  = col_character(),
+                                          ACUERDO = col_character(),
+                                          ACTECON = col_character(), 
+                                          DEPIM   = col_character(),
+                                          DEREL   = col_character())) %>%
+  select(FECH, VACID, NIT, RZIMPO)
 
 # Unique names
-unique_name_import <- import_col_comp_2019 %>%
-    select(NIT, RZIMPO) %>%
-    distinct(NIT, .keep_all = TRUE)
+unique_name_import <- import_col_comp_2021 %>%
+  select(NIT, RZIMPO) %>%
+  distinct(NIT, .keep_all = TRUE)
 
 # Table
-import_col_comp_2019 %>%
-    group_by(NIT) %>%
-    summarise(import_cif_us = sum(VACID)) %>%
-    ungroup() %>%
-    arrange(desc(import_cif_us)) %>%
-    left_join(unique_name_import, by = "NIT") %>%
-    select(NIT, RZIMPO, import_cif_us) %>%
-    set_names(nm = c("NIT", "Name", "Imports (US dollars)")) %>%
-    slice(1:10) %>%
-    mutate(`Imports (US dollars)` = scales::dollar(`Imports (US dollars)`),
-           NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
-    kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to imports (CIF) in 2019") %>%
-    kable_styling(font_size = 6, latex_options = "striped") %>%
-    row_spec(row = 0, bold = TRUE)
+import_col_comp_2021 %>%
+  group_by(NIT) %>%
+  summarise(import_cif_us = sum(VACID)) %>%
+  ungroup() %>%
+  arrange(desc(import_cif_us)) %>%
+  left_join(unique_name_import, by = "NIT") %>%
+  select(NIT, RZIMPO, import_cif_us) %>%
+  set_names(nm = c("NIT", "Name", "Imports (US dollars)")) %>%
+  slice(1:10) %>%
+  mutate(`Imports (US dollars)` = scales::dollar(`Imports (US dollars)`),
+         NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
+  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to imports (CIF) in 2021 (December is not included)") %>%
+  kable_styling(font_size = 6, latex_options = "striped") %>%
+  row_spec(row = 0, bold = TRUE)
 ```
 
-[^2]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de importaciones > Estadísticas de Importaciones - IMPO - 2012 A 2020 > Impo_2019
+[^2]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de importaciones > Estadísticas de Importaciones - IMPO - 2012 A 2021 > Impo_2021
 
 # Franchising in Colombia
 
