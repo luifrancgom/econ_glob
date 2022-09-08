@@ -1,7 +1,7 @@
 ---
 title: "Managing international operations"
 author: "Luis Francisco Gomez Lopez"
-date: 2021-02-14 08:06:23
+date: 2022-06-10 11:01:12
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -67,6 +67,7 @@ library(DiagrammeR)
 
 Understand the elements to consider when formulating production strategies and the issues when acquiring physical resources
 
+
 # Production strategy
 
 ```{r, out.width="60%"}
@@ -98,8 +99,8 @@ digraph boxes_and_circles {
   'Production\nstrategy' -> 'Process\nplanning';
   'Production\nstrategy' -> 'Facilities\nlayout\nplanning';
   
-  'Capacity\nplanning' -> 'Location\neconomies';
-  'Capacity\nplanning' -> 'Centralization\nvs\ndecentralization';
+  'Facilities\nlocation\nplanning' -> 'Location\neconomies';
+  'Facilities\nlocation\nplanning' -> 'Centralization\nvs\ndecentralization';
   
   'Process\nplanning' -> 'Standarization\nvs\nadaptation';
   
@@ -109,21 +110,21 @@ digraph boxes_and_circles {
 
 # Production strategy
 
-- Capacity planning
+- **Capacity planning**: "the process of accessing a company's ability to produce enough output to satisfy market demand" [@wild_international_2019, Chapter 15, p 388]
 
-    + Ability to produce enough output to satisfy market demand [@wild_international_2019, Chapter 15, p 388]  
+- **Facilities location planning**: "selecting the location for production facilities" [@wild_international_2019, Chapter 15, p 388]
 
-- Facilities location planning
-
-    + Selecting the location for production facilities [@wild_international_2019, Chapter 15, p 388]
-
-- Process planning
-
-    + Deciding the process that the company will be use to create its product [@wild_international_2019, Chapter 15, p 390]
+    + Location economies: "economic benefits derived from locating production activities in optimal locations" [@wild_international_2019, Chapter 15, p 389]
     
-- Facilities layout planning
+    + Centralization vs Descentralization: concentration of production facilities in one location vs spread facilities over several locations [@wild_international_2019, Chapter 15, p 390]
 
-    + Deciding the spatial arrangement of production processes within production facilities [@wild_international_2019, Chapter 15, p 391]
+# Production strategy
+
+- **Process planning**: deciding on the process that a company will use to create its product [@wild_international_2019, Chapter 15, p 390]
+
+    + Standarization vs Adaptation: standardized for all markets vs adapted to manufacture products modified for different markets [@wild_international_2019, Chapter 15, p 391]
+    
+- **Facilities layout planning**: "Deciding the spatial arrangement of production processes within production facilities" [@wild_international_2019, Chapter 15, p 391]
 
 # Acquiring physical resources
 
@@ -285,7 +286,11 @@ digraph boxes_and_circles {
 - Issuing equity
 
     + Stock ownership
-
+    
+        + American Depository Receipts
+        + Venture capital ("Capital de Riesgo")
+        + Emerging stock markets
+        
 - Internal funding
 
     + Resources from parent companies

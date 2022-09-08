@@ -1,7 +1,7 @@
 ---
 title: "Selecting and managing entry modes"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-02-13 13:33:30
+date: 2022-06-10 10:58:30
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -205,17 +205,17 @@ digraph boxes_and_circles {
 ```{r, out.width="90%"}
 
 # Data
-col_2020_exports <- ct_search(reporters = "Colombia",
+col_2021_exports <- comtradr::ct_search(reporters = "Colombia",
           partners = "All",
           trade_direction = "exports",
           freq = "annual",
-          start_date = 2020,
-          end_date = 2020,
+          start_date = 2021,
+          end_date = 2021,
           commod_codes = "TOTAL",
           type = "goods")
 
 # Data clean
-col_2020_exports_clean <- col_2020_exports %>%
+col_2021_exports_clean <- col_2021_exports %>%
     as_tibble() %>%
     select(year, trade_flow,
            reporter_iso, reporter,
@@ -233,7 +233,7 @@ col_2020_exports_clean <- col_2020_exports %>%
                                  {(trade_value_usd / sum(trade_value_usd)) %>% scales::percent(accuracy = 0.01)}"))
 
 # Plot
-col_2020_exports_clean %>%
+col_2021_exports_clean %>%
     ggplot(aes(area  = trade_value_usd,
                label = label_text,
                subgroup = continent)) +
@@ -245,12 +245,12 @@ col_2020_exports_clean %>%
     labs(x        = "",
          y        = "",
          fill     = "",
-         title    = "Colombia goods exports by destination as percent of total exports: year 2020",
+         title    = "Colombia goods exports by destination as percent of total exports: year 2021",
          subtitle = str_glue("Territories excluded: Free zones, British Indian Ocean Territory, Areas not elsewhere specified
                              and other Asia areas not elsewhere specified,
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2022-02-13")) +
+                              Last update: 2022-06-10")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -303,17 +303,17 @@ export_col_comp_2021 %>%
 ```{r, out.width="90%"}
 
 # Data
-col_2019_imports <- ct_search(reporters = "Colombia",
+col_2021_imports <- ct_search(reporters = "Colombia",
                               partners = "All",
                               trade_direction = "imports",
                               freq = "annual",
-                              start_date = 2019,
-                              end_date = 2019,
+                              start_date = 2021,
+                              end_date = 2021,
                               commod_codes = "TOTAL",
                               type = "goods")
 
 # Data clean
-col_2019_imports_clean <- col_2019_imports %>%
+col_2021_imports_clean <- col_2021_imports %>%
     as_tibble() %>%
     select(year, trade_flow,
            reporter_iso, reporter,
@@ -332,7 +332,9 @@ col_2019_imports_clean <- col_2019_imports %>%
                                  {(trade_value_usd / sum(trade_value_usd)) %>% scales::percent(accuracy = 0.01)}"))
 
 # Plot
-col_2019_imports_clean %>%
+col_2021_imports_clean %>%
+    # Drop NA values. See continent variable.
+    drop_na() %>% 
     ggplot(aes(area  = trade_value_usd,
                label = label_text,
                subgroup = continent)) +
@@ -344,12 +346,12 @@ col_2019_imports_clean %>%
     labs(x        = "",
          y        = "",
          fill     = "",
-         title    = "Colombia goods imports by origin as percent of total exports: year 2019",
+         title    = "Colombia goods imports by origin as percent of total exports: year 2021",
          subtitle = str_glue("Territories excluded: Free zones, British Indian Ocean Territory, Colombia
                              other Asia areas not elsewhere specified and French Southern and Antarctic Lands
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2022-02-13")) +
+                              Last update: 2022-10-06")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -400,7 +402,7 @@ import_col_comp_2021 %>%
   slice(1:10) %>%
   mutate(`Imports (US dollars)` = scales::dollar(`Imports (US dollars)`),
          NIT                    = str_remove(string = NIT, pattern = "^0+")) %>%
-  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to imports (CIF) in 2021 (December is not included)") %>%
+  kable(format = "latex", booktabs = TRUE, caption = "Top 10 companies according to imports (CIF) in 2021") %>%
   kable_styling(font_size = 6, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE)
 ```

@@ -1,7 +1,7 @@
 ---
 title: "Regional economic integration"
 author: Luis Francisco Gomez Lopez
-date: 2022-01-28 11:18:54
+date: 2022-06-10 09:35:10
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -127,7 +127,7 @@ rta_col <- read_csv("003_all_rta.csv") %>%
         TRUE ~ `Current signatories`)) %>%
     separate_rows(`Current signatories`, sep = ";") %>% 
     mutate(`Current signatories` = str_trim(`Current signatories`, side = "both")) %>%
-    left_join(y = ISO_3166_1 %>% 
+    left_join(y = ISOcodes::ISO_3166_1 %>% 
                   as_tibble() %>% 
                   select(Alpha_3, Name), by = c("Current signatories" = "Name")) %>% 
     filter(`Current signatories` != "Colombia") %>%
@@ -135,7 +135,7 @@ rta_col <- read_csv("003_all_rta.csv") %>%
     set_names(c("rta_name", "iso_alpha_3")) %>% 
     count(iso_alpha_3, name = "n_rta")
 
-rnaturalearth::ne_countries(scale = 10, returnclass = "sf") %>%
+ne_countries_n_rta <- rnaturalearth::ne_countries(scale = 10, returnclass = "sf") %>%
   select(iso_a3, admin, geometry) %>% 
   left_join(rta_col, by = c("iso_a3" = "iso_alpha_3")) %>% 
   replace_na(replace = list(n_rta = 0)) %>%
@@ -143,16 +143,20 @@ rnaturalearth::ne_countries(scale = 10, returnclass = "sf") %>%
          n_rta = case_when(
            iso_a3 == "COL" ~ "Colombia",
            TRUE ~ n_rta),
-         n_rta = fct_relevel(n_rta, c("0", "1", "2", "3", "4", "5", "6", "Colombia"))) %>%
+         n_rta = fct_relevel(n_rta, c("0", "1", "2", "3", "4", "5", "6", "Colombia")))
   
     # Plot
+  ne_countries_n_rta %>% 
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = n_rta), color = "black", alpha = 0.5) + 
-    scale_fill_manual(values = c("white", palette_light()[1:7])) +
+    scale_fill_manual(values = c("white", 
+                               "#2C3E50", "#E31A1C", "#18BC9C",
+                               "#CCBE93", "#A6CEE3", "#1F78B4",
+                               "#B2DF8A")) +
     labs(fill     = "Number of RTAs",
          title    = "Number of RTAs in force with Colombia by country reported to WTO",
          caption  = str_glue("Source data: RTA database - WTO & OMC,
-                              Last update data: 2021-02-04,
+                              Last update data: 2022-06-09,
                               Source data map: Natural Earth")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
@@ -206,12 +210,12 @@ read_csv("003_all_rta.csv") %>%
     kable(format = "latex", booktabs = TRUE, caption = "Colombia RTAs in force by type reported to WTO") %>% 
     kable_styling(font_size = 7, latex_options = "striped") %>% 
     row_spec(row = 0, bold = TRUE) %>% 
-    footnote(number = c("Source: RTA database - WTO & OMC", "Last update: 2021-02-04"))
+    footnote(number = c("Source: RTA database - WTO & OMC", "Last update: 2022-06-09"))
 ```
 
 # Integration in Europe
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 eu_efta <- codelist_panel %>%
     filter((!is.na(eu28) | (iso3c %in% c("ISL", "LIE", "NOR", "CHE"))) & year == 2020 & (iso3c != "GBR")) %>% 
@@ -232,7 +236,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:2])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50", "#E31A1C")) +
     coord_sf(xlim = c(-25, 60), ylim = c(35, 80)) +
     labs(fill     = "",
          title    = "European Free Trade Association (EFTA) and European Union (EU)",
@@ -251,7 +256,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in North America
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>% 
@@ -263,7 +268,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50")) +
     coord_sf(xlim = c(-180, -50), ylim = c(15, 80)) +
     labs(fill     = "",
          title    = "United States, Mexico, Canada Agreement (USMCA)",
@@ -282,7 +288,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Central America and the Caribbean
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -305,7 +311,9 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:3])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50", "#E31A1C",
+                                 "#18BC9C")) +
     coord_sf(xlim = c(-95, -50), ylim = c(0, 30)) +
     labs(fill     = "",
          title    = str_glue("Central American Integration System (SICA) and 
@@ -325,7 +333,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in South America
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -340,7 +348,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:2])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50", "#E31A1C")) +
     coord_sf(xlim = c(-95, -30), ylim = c(-55, 10)) +
     labs(fill     = "",
          title    = str_glue("Andean Community (CAN) and 
@@ -360,7 +369,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Africa
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -386,7 +395,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:2])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50", "#E31A1C")) +
     coord_sf(xlim = c(-25, 60), ylim = c(-35, 35)) +
     labs(fill     = "",
          title    = str_glue("Common Market for Eastern and Southern Africa (COMESA) and 
@@ -406,7 +416,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in the Middle East
 
-```{r, out.width="90%"}
+```{r, out.width="60%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -420,7 +430,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50")) +
     coord_sf(xlim = c(35, 60), ylim = c(10, 35)) +
     labs(fill     = "",
          title    = str_glue("Gulf Cooperation Council (GCC)"),
@@ -440,7 +451,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Asia
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
@@ -460,7 +471,9 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:3])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50", "#E31A1C", 
+                                 "#18BC9C")) +
     coord_sf(xlim = c(25, 180), ylim = c(-15, 80)) +
     labs(fill     = "",
          title    = str_glue("Association of Southeast Asian Nations (ASEAN) and 
@@ -480,7 +493,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Regional integration in Oceania
 
-```{r, out.width="90%"}
+```{r, out.width="70%"}
 
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
@@ -493,7 +506,8 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     # Plot
     ggplot() +
     geom_sf(aes(geometry = geometry, fill = trade_region), color = "black", alpha = 0.5)  + 
-    scale_fill_manual(values = c("white", palette_light()[1:3])) +
+    scale_fill_manual(values = c("white", 
+                                 "#2C3E50")) +
     coord_sf(xlim = c(110, 180), ylim = c(-50, -5)) +
     labs(fill     = "",
          title    = str_glue("Australia & New Zealand Closer Economic Relations Trade Agreement (ANZCERTA)"),

@@ -1,7 +1,7 @@
 ---
 title: "International trade and investment"
 author: Luis Francisco Gomez Lopez
-date: 2022-01-27 11:36:04
+date: 2022-06-10 09:33:56
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -287,38 +287,38 @@ tbl_exports_imports %>%
     
 # Patterns of international trade 
 
-- Colombian exports __HS 4 digits (HS92) edition__ year 1997 [@oec_observatory_2022]
+- Colombian exports __HS 4 digits (HS92) edition__ year 1995 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_col_exports_1997_hs4_92.png")
+include_graphics(path = "002_col_exports_1995_hs4_92.png")
 ```
     
 # Patterns of international trade 
 
-- Colombian exports __HS 4 digits (HS92) edition__ year 2019 [@oec_observatory_2022]
+- Colombian exports __HS 4 digits (HS92) edition__ year 2020 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_col_exports_2019_hs4_92.png")
+include_graphics(path = "002_col_exports_2020_hs4_92.png")
 ```
 
 # Patterns of international trade 
 
-- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 1997 [@oec_observatory_2022]
+- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 2000 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_coffee_exports_1997_hs4_92.png")
+include_graphics(path = "002_coffee_exports_2000_hs4_92.png")
 ```
 
 # Patterns of international trade 
 
-- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 2019 [@oec_observatory_2022]
+- Coffee exporters __HS 4 digits (0901) (HS92) edition__ year 2020 [@oec_observatory_2022]
 
 ```{r, out.width="100%"}
 
-include_graphics(path = "002_coffee_exports_2019_hs4_92.png")
+include_graphics(path = "002_coffee_exports_2020_hs4_92.png")
 ```
 
 # Benefits of international trade

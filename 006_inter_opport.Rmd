@@ -1,7 +1,7 @@
 ---
 title: "Analyzing international opportunities"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-02-12 13:22:56
+date: 2022-06-10 10:10:23
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -71,6 +71,8 @@ Understand the importance of analyzing the characteristics of the national econo
 
 # National business environment
 
+\definecolor{tq_red}{RGB}{227, 26, 28}
+
 - Data
 
     + Doing Business - World Bank: https://www.doingbusiness.org/
@@ -86,6 +88,9 @@ Understand the importance of analyzing the characteristics of the national econo
         + __Doesn't__ measure all aspects of the business environment that matter to companies or investors
         
         + Only 10 topics with the specific aim on measuring business regulations are cover
+        
+- **\textcolor{tq_red}{Warning:} Investigation of Data Irregularities in  
+Doing Business 2018 and Doing Business 2020** [@c_machen_investigation_2021]
         
 # National business environment
 

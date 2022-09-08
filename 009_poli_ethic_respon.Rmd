@@ -1,7 +1,7 @@
 ---
 title: "Political economy and ethics"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-02-14 09:01:21
+date: 2022-10-06 11:02:14
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -261,9 +261,9 @@ digraph boxes_and_circles {
   
   node [shape = oval, color = '#18BC9C']
   
-  'Tradition';
-  'Precedent';
-  'Usage';
+  'Tradition:\nA country’s\nlegal history';
+  'Precedent:\nPast cases\nthat have come\nbefore the courts';
+  'Usage:\nHow laws are\napplied in specific\nsituations';
   'Meet\nstandards';
   'Responsability\nfor\ndamage';
   
@@ -275,9 +275,9 @@ digraph boxes_and_circles {
   'Legal\nissues' -> 'Taxation';
   'Legal\nissues' -> 'Antitrust\nregulations';
   
-  'Civil law' -> 'Tradition';
-  'Civil law' -> 'Precedent';
-  'Civil law' -> 'Usage';
+  'Common law' -> 'Tradition:\nA country’s\nlegal history';
+  'Common law' -> 'Precedent:\nPast cases\nthat have come\nbefore the courts';
+  'Common law' -> 'Usage:\nHow laws are\napplied in specific\nsituations';
   'Product\nsafety\nand\nliability' -> 'Meet\nstandards';
   'Product\nsafety\nand\nliability' -> 'Responsability\nfor\ndamage';
    
@@ -292,7 +292,7 @@ digraph boxes_and_circles {
 ```{r, out.width="80%"}
 
 # Data
-# Data
+# https://www.taxcomplexity.org/
 tax_complex_ind_2020 <- read_excel(path      = "009_tax_complexity_2022-02-14.xlsx", 
                                    sheet     = 2, 
                                    range     = "A1:C228", 
@@ -345,6 +345,7 @@ tax_complex_ind_2020 %>%
 ```{r, out.width="80%"}
 
 # Data
+# https://www.tax-index.org/
 year_chosen <- 2018
 
 tax_attract_ind <- read_excel(path      = "009_tax_index_custom_2021-03-21.xlsx", 

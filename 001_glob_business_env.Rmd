@@ -1,7 +1,7 @@
 ---
 title: "Global business environment"
 author: Luis Francisco Gomez Lopez
-date: 2022-01-25 11:38:35
+date: 2022-06-10 09:32:35
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -124,10 +124,10 @@ data_exports_imports %>%
 
 # Data
 companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue") %>%
-  html_table(fill = TRUE) %>%
-  .[[5]] %>%
-  as_tibble() %>%
-  select(2,4) %>%
+  html_table(fill = TRUE) %>% 
+  .[[1]] %>% 
+  as_tibble() %>% 
+  select(2,4) %>% 
   slice(-1) %>% 
   set_names(nm = c("company_country", "revenue_gdp")) %>%
   mutate(revenue_gdp = str_remove(string = revenue_gdp, pattern = "\\$*"),
@@ -142,8 +142,9 @@ companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_larg
               select(country, NY.GDP.MKTP.CD) %>%
               set_names(nm = c("company_country", "revenue_gdp")) %>%
               mutate(type = "Country"))
-  # Plot
-  companies_countries %>% 
+
+# Plot
+companies_countries %>% 
   ggplot() +
   geom_col(aes(x = revenue_gdp,
                y = fct_reorder(company_country, revenue_gdp),
@@ -159,7 +160,7 @@ companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_larg
        subtitle = str_glue("Variables Units: current USD
                               GDP WDI code : NY.GDP.MKTP.CD"),
        caption  = str_glue("Source 1: World Development Indicators - World Bank,
-                              Last update: 2021-12-16
+                              Last update: 2022-05-25
                               Source 2: Fortune 500 - Fortune magazine
                               Last update: 2021-08")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
@@ -304,14 +305,14 @@ companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_larg
 
                      # Data set that contains KOF Globalization
                      # index version 2019
-kofdata_col_wld <- kofdata::get_dataset(set_name = "ds_globidx.v2019") %>%
+kofdata_col_wld <- kofdata::get_collection(collection_name = "ds_globidx.v2019") %>%
   # Extract the information from Colombia
   .$ch.kof.globidx.v2019.gi.col %>%
   # Coerce time-series objects, ts, to tibble
   timetk::tk_tbl() %>% 
   mutate(country = "Colombia") %>% 
             # Obtain the same data set from the world
-  bind_rows(get_dataset(set_name = "ds_globidx.v2019") %>%
+  bind_rows(kofdata::get_collection(collection_name = "ds_globidx.v2019") %>%
               .$ch.kof.globidx.v2019.gi.wld  %>%
               timetk::tk_tbl() %>%
               mutate(country = "World"))

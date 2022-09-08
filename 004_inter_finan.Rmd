@@ -1,7 +1,7 @@
 ---
 title: "International financial markets"
 author: Luis Francisco Gomez Lopez
-date: 2022-02-12 17:36:02
+date: 2022-06-10 09:48:11
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -114,7 +114,7 @@ read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2022-12-02"))
+                      "Lat update: 2022-06-10"))
 ```
 
 # Exchange regime in Colombia
@@ -131,7 +131,7 @@ read_csv("004_intermediarios_mercado_cambiario.csv") %>%
   kable_styling(font_size = 4, latex_options = "striped") %>%
   row_spec(row = 0, bold = TRUE) %>% 
   footnote(number = c("Source: Sistema Estadístico Cambiario - SEC",
-                      "Lat update: 2022-02-12"))
+                      "Lat update: 2022-06-10"))
 ```
 
 # Exchange rates
