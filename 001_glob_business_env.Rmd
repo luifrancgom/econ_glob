@@ -1,7 +1,7 @@
 ---
 title: "Global business environment"
 author: Luis Francisco Gomez Lopez
-date: 2022-06-10 09:32:35
+date: 2023-01-06 22:01:35
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -105,7 +105,7 @@ data_exports_imports %>%
                               Imports WDI code : NE.IMP.GNFS.KD
                               Exports WDI: NE.EXP.GNFS.KD"),
        caption  = str_glue("Source: World Development Indicators - World Bank,
-                              Last update: 2021-12-16")) +
+                              Last update: 2022-12-22")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),
@@ -137,8 +137,8 @@ companies_countries <- read_html(x = "https://en.wikipedia.org/wiki/List_of_larg
   slice_max(order_by = revenue_gdp, n = 5) %>% 
   bind_rows(wb_data(country = c("COL", "SWE", "THA", "ZAF", "FIN"),
                     indicator = "NY.GDP.MKTP.CD",
-                    start_date = 2020,
-                    end_date = 2020) %>%
+                    start_date = 2021,
+                    end_date = 2021) %>%
               select(country, NY.GDP.MKTP.CD) %>%
               set_names(nm = c("company_country", "revenue_gdp")) %>%
               mutate(type = "Country"))
@@ -156,13 +156,13 @@ companies_countries %>%
   labs(x        = "Revenue or GDP USD Billions (Short scale)",
        y        = "Country or Company",
        fill     = "",
-       title    = "Anual Revenue or GDP in year 2020",
+       title    = "Anual Revenue or GDP in year 2021",
        subtitle = str_glue("Variables Units: current USD
                               GDP WDI code : NY.GDP.MKTP.CD"),
        caption  = str_glue("Source 1: World Development Indicators - World Bank,
-                              Last update: 2022-05-25
+                              Last update: 2022-12-22
                               Source 2: Fortune 500 - Fortune magazine
-                              Last update: 2021-08")) +
+                              Last update: 2022-08-25")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),
@@ -298,10 +298,10 @@ companies_countries %>%
 
 # List the available datasets
 ## Detect the data sets related to the KOF Globalization Index
-# kofdata::list_available_sets() %>% 
-#   as_tibble() %>%
-#                                               # Detec glob of glob          
-#   filter(str_detect(string = set_description, pattern = "[Gg]lob"))
+# kofdata::list_available_collections() %>%
+#     as_tibble() %>%
+#                                                 # Detec glob of glob
+#     filter(str_detect(string = collection_description, pattern = "[Gg]lob"))
 
                      # Data set that contains KOF Globalization
                      # index version 2019
@@ -336,7 +336,7 @@ kofdata_col_wld %>%
        subtitle = str_glue("Colombia KOF index code: ch.kof.globidx.v2019.gi.col
                            World KOF index code: ch.kof.globidx.v2019.gi.wld"),
        caption  = str_glue("Source: KOF Swiss Economic Institute,
-                           Last update: 2021")) +
+                           Last update: 2022")) +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
         plot.background   = element_rect(fill = "#f3fcfc"),
         panel.background  = element_rect(fill = "#f3f7fc"),

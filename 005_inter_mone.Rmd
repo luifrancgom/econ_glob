@@ -1,7 +1,7 @@
 ---
 title: "International monetary system"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-06-10 09:57:44
+date: 2023-01-07 19:48:44
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -103,7 +103,7 @@ Analyze the importance of exchange rates to international business management an
 ```{r, out.width="80%"}
 
 # Data
-cop_usd_trm <- read_csv(file   = "005_trm_cop_usd_consolidado_series.csv") %>% 
+cop_usd_trm <- read_csv2(file   = "005_trm_cop_usd_consolidado_series.csv") %>% 
   set_names(nm = c("date", "trm")) %>% 
   mutate(trm_change = (trm - lag(trm)))
 

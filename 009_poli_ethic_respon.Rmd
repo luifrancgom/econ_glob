@@ -1,7 +1,7 @@
 ---
 title: "Political economy and ethics"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-10-06 11:02:14
+date: 2023-01-07 21:50:14
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -134,7 +134,7 @@ ggplot(data = tibble(x = 0, y = 0)) +
 
 # Political macroenvironment
 
-```{r, out.width="100%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -194,7 +194,7 @@ digraph boxes_and_circles {
 
 # Economic macroenvironment
 
-```{r, out.width="60%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -237,7 +237,7 @@ digraph boxes_and_circles {
 
 # Legal macroenvironment
 
-```{r, out.width="100%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -293,8 +293,9 @@ digraph boxes_and_circles {
 
 # Data
 # https://www.taxcomplexity.org/
-tax_complex_ind_2020 <- read_excel(path      = "009_tax_complexity_2022-02-14.xlsx", 
+tax_complex_ind_2020 <- read_excel(path      = "009_tax_complexity_2023-01-07.xlsx", 
                                    sheet     = 2, 
+                                   # Only 3 columns
                                    range     = "A1:C228", 
                                    col_names = TRUE) %>% 
   set_names(nm = c("country", "year", "tax_complex_ind")) %>% 
@@ -324,7 +325,7 @@ tax_complex_ind_2020 %>%
                            Maximum value: {tax_complex_ind_2020$country[1]} ({tax_complex_ind_2020$tax_complex_ind[1] %>% round(digits = 3)})
                            Minimum value: {tax_complex_ind_2020$country[length(tax_complex_ind_2020$country)]} ({tax_complex_ind_2020$tax_complex_ind[length(tax_complex_ind_2020$country)] %>% round(digits = 3)})"),
        caption  = str_glue("Data source: www.taxcomplexity.org
-                            Last update: 2022-02-14")) +
+                            Last update: 2023-01-07")) +
   scale_y_continuous(limits = c(0,1)) + 
   scale_fill_tq() +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
@@ -382,7 +383,7 @@ tax_attract_ind %>%
                            Maximum value: {tax_attract_ind$country[1]} ({tax_attract_ind$tax_attract_ind[1] %>% round(digits = 3)})
                            Minimum value: {tax_attract_ind$country[length(tax_attract_ind$country)]} ({tax_attract_ind$tax_attract_ind[length(tax_attract_ind$country)] %>% round(digits = 3)})"),
        caption  = str_glue("Data source: https://www.tax-index.org/
-                            Last update: 2121-03-12")) +
+                            Last update: 2021-03-12")) +
   scale_y_continuous(limits = c(0,1)) + 
   scale_fill_tq() +
   theme(panel.border      = element_rect(fill = NA, color = "black"),
@@ -413,7 +414,7 @@ tax_attract_ind %>%
 
 - Principles of social responsibility [@iso_iso_2010, Section 4]
 
-```{r, out.width="100%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -464,7 +465,7 @@ digraph boxes_and_circles {
 
 - The organization, stakeholders and society [@iso_iso_2010, Section 5, Fig 2]
 
-```{r, out.width="100%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -515,7 +516,7 @@ digraph boxes_and_circles {
 
     + Each core subject has specific issues where you can find a detail description in [@iso_iso_2010, Section 6, p 19-68] 
 
-```{r, out.width="100%"}
+```{r, out.width="160%"}
 
 grViz("
 digraph boxes_and_circles {

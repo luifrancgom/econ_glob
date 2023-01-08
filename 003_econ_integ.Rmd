@@ -1,7 +1,7 @@
 ---
 title: "Regional economic integration"
 author: Luis Francisco Gomez Lopez
-date: 2022-06-10 09:35:10
+date: 2023-01-07 11:02:10
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -45,6 +45,7 @@ library(countrycode)
 library(tidyquant)
 library(knitr)
 library(kableExtra)
+library(readxl)
 ```
 
 # Contents
@@ -111,7 +112,7 @@ efta <- codelist_panel %>%
     str_c(collapse = "; ")
 
 # Raw data
-rta_col <- read_csv("003_all_rta.csv") %>% 
+rta_col <- read_excel(path = "003_AllRTAs.xlsx", sheet = 1) %>%
     filter(str_detect(string = `Current signatories`, pattern = "Colombia"),
            Status == "In Force") %>%
     select(`RTA Name`, `Current signatories`) %>%
@@ -200,9 +201,9 @@ include_graphics("003_level_integration.png")
         
 # Level of integration
 
-```{r}
+```{r, out.width="100%"}
 
-read_csv("003_all_rta.csv") %>% 
+read_excel(path = "003_AllRTAs.xlsx", sheet = 1) %>% 
     filter(str_detect(string = `Current signatories`, pattern = "Colombia"),
            Status == "In Force", 
            !str_detect(string = `RTA Name`, pattern = "Accession")) %>% 
@@ -215,7 +216,7 @@ read_csv("003_all_rta.csv") %>%
 
 # Integration in Europe
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 eu_efta <- codelist_panel %>%
     filter((!is.na(eu28) | (iso3c %in% c("ISL", "LIE", "NOR", "CHE"))) & year == 2020 & (iso3c != "GBR")) %>% 
@@ -256,7 +257,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in North America
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>% 
@@ -288,7 +289,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Central America and the Caribbean
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -333,7 +334,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in South America
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -369,7 +370,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Africa
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -416,7 +417,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in the Middle East
 
-```{r, out.width="60%"}
+```{r, out.width="80%"}
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
     select(adm0_a3, admin, geometry) %>%
@@ -451,7 +452,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Integration in Asia
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
@@ -493,7 +494,7 @@ ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%
 
 # Regional integration in Oceania
 
-```{r, out.width="70%"}
+```{r, out.width="80%"}
 
 
 ne_countries(returnclass = "sf", type = "countries", scale = 10) %>%

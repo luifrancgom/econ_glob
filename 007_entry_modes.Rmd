@@ -1,7 +1,7 @@
 ---
 title: "Selecting and managing entry modes"
 author: "Luis Francisco Gomez Lopez"
-date: 2022-06-10 10:58:30
+date: 2023-01-07 20:56:30
 output:
   beamer_presentation:
     colortheme: dolphin
@@ -78,7 +78,7 @@ Introduce the students to the different entry modes companies use to do internat
 
 # Entry modes for international markets
 
-```{r, out.width="100%"}
+```{r, out.width="175%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -148,7 +148,7 @@ digraph boxes_and_circles {
 
 # Entry modes for international markets
 
-```{r, out.width="100%"}
+```{r, out.width="175%"}
 
 grViz("
 digraph boxes_and_circles {
@@ -250,7 +250,7 @@ col_2021_exports_clean %>%
                              and other Asia areas not elsewhere specified,
                              Products excluded: exports of services are not included"),
          caption  = str_glue("Source: United Nations International Trade Statistics Database (UN Comtrade),
-                              Last update: 2022-06-10")) +
+                              Last update: 2023-01-07")) +
     theme(panel.border      = element_rect(fill = NA, color = "black"),
           plot.background   = element_rect(fill = "#f3fcfc"),
           panel.background  = element_rect(fill = "#f3f7fc"),
@@ -296,7 +296,7 @@ export_col_comp_2021 %>%
   row_spec(row = 0, bold = TRUE)
 ```
 
-[^1]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de exportaciones > Estadísticas de Exportaciones - EXPO - 2011 A 2021 > Expo_2021
+[^1]: Check out the full data set in https://www.dane.gov.co/ > Datos abiertos Microdatos y Metadatos > Comercio internacional > Estadísticas de Exportaciones - EXPO - 2011 A 2022 > Obtener Microdatos > Expo_2021
 
 # Importing goods in Colombia
 
@@ -367,7 +367,7 @@ col_2021_imports_clean %>%
 ```{r}
 
 # Files
-csv_files <- dir_ls(path = "007_import_col_monthly/Impo_2021/", regexp = "[.]csv$")
+csv_files <- dir_ls(path = "007_import_col_monthly", regexp = "[.]csv$")
 
 # Data
 import_col_comp_2021 <- csv_files %>%
@@ -407,7 +407,7 @@ import_col_comp_2021 %>%
   row_spec(row = 0, bold = TRUE)
 ```
 
-[^2]: Check out the full data set in https://sitios.dane.gov.co/anda-index/ > Economía > Comercio internacional > Estadísticas de importaciones > Estadísticas de Importaciones - IMPO - 2012 A 2021 > Impo_2021
+[^2]: Check out the full data set in https://www.dane.gov.co/ > Datos abiertos Microdatos y Metadatos > Comercio internacional > Estadísticas de Importaciones - IMPO - 2012 A 2022 > Obtener Microdatos > Impo_2021_1 e Impo_2021_1
 
 # Franchising in Colombia
 
