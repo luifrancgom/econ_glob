@@ -3,6 +3,8 @@ title: "Syllabus Electiva I: Globalización Económica Module A AE"
 author: "Distance Learning Faculty (FAEDIS)"
 date: "2023-1"
 output:
+  pdf_document:
+    number_sections: yes
   html_document:
     df_print: paged
     highlight: tango
@@ -10,8 +12,6 @@ output:
     theme: flatly
     toc: yes
     toc_depth: 4
-  pdf_document:
-    number_sections: yes
 bibliography: econ_glob_faedis.bib
 link-citations: yes
 ---
@@ -58,7 +58,7 @@ library(knitr)
 - Type: Theoretical-Practice
 - Area of Knowledge: Professional
 - Semester: 8
-- Block: 1 (January 23 – March 26, 2022) 
+- Block: 1 (January 23 – March 26, 2023) 
 
 ## Justification
 
