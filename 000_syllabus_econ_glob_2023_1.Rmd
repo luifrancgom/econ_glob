@@ -252,7 +252,7 @@ tibble(Week = c(1:9),
         + __Prerequisites__: 
             + Have answered the Questionare 3 before 22:00 hours
 
-- March 26
+- March 23
     
     + __Virtual meeting Political economy and ethics__
         + __Opening time__: 19:00 - 19:45 hours
@@ -260,7 +260,7 @@ tibble(Week = c(1:9),
             + Read and review [@wild_international_2020, Chapter 3]
             + Have a headset with a built-in microphone to isolate noise from the environment
 
-- March 28
+- March 25
             
     + __Oral presentation Final Exam Opening__
         + __Opening time__: 15:30 hours
